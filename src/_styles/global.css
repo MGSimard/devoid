@@ -7,12 +7,11 @@
 :root {
   --siteMaxWidth: 1440px;
   --sitePadding: 2rem;
-
+  --navHeight: 4rem;
   --coreFont:
     "Satoshi", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell,
     Ubuntu, roboto, noto, arial, sans-serif;
   --headingFont: "Zodiak", Garamond, "Times New Roman", Georgia, serif;
-
   --clrPrimary: #000;
   --clrSecondary: #000;
 }
@@ -50,6 +49,7 @@ body {
 #app {
   display: flex;
   flex-direction: column;
+  padding-top: var(--navHeight);
   min-height: 100dvh;
 }
 nav,
@@ -60,7 +60,7 @@ footer {
   flex-shrink: 0;
 }
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -68,6 +68,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  height: var(--navHeight);
   text-transform: uppercase;
 }
 nav ul {
@@ -89,8 +90,6 @@ footer {
 .section-content {
   margin: 0 auto;
   max-width: var(--siteMaxWidth);
-}
-footer {
 }
 #theme-toggle {
   position: fixed;
@@ -143,3 +142,6 @@ details[open] summary {
   user-select: none;
 }
 /**/
+/* HERO INDEX PAGE */
+#hero {
+}
