@@ -26,10 +26,6 @@ function PageIndex() {
             arcu.
           </p>
         </Section>
-        <Section>
-          <h2>Theme Toggle</h2>
-          <ThemeToggle />
-        </Section>
       </main>
     </>
   );

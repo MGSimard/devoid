@@ -92,6 +92,11 @@ footer {
 }
 footer {
 }
+#theme-toggle {
+  position: fixed;
+  bottom: var(--sitePadding);
+  right: var(--sitePadding);
+}
 /* DEFAULTS */
 h1,
 h2,
