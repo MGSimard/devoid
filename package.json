@@ -1,13 +1,25 @@
 {
-  "name": "my-app",
+  "name": "purposeless-website",
+  "version": "0.1.0",
   "private": true,
+  "author": "MGSimard <mgsimard.dev@gmail.com> (https://mgsimard.dev)",
+  "description": "This website has no purpose.",
+  "license": "MIT",
   "type": "module",
-  "scripts": {
-    "start": "vite --port 3000",
-    "build": "vite build && tsc",
-    "serve": "vite preview",
-    "test": "vitest run"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGSimard/purposeless-website.git"
   },
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "purposeless-website"
+  ],
+  "bugs": {
+    "url": "https://github.com/MGSimard/purposeless-website/issues"
+  },
+  "homepage": "https://github.com/MGSimard/purposeless-website#readme",
   "dependencies": {
     "@tanstack/react-router": "^1.112.0",
     "@tanstack/router-devtools": "^1.112.0",
@@ -27,5 +39,9 @@
     "vite": "^6.1.0",
     "vitest": "^3.0.5",
     "web-vitals": "^4.2.4"
+  },
+  "packageManager": "pnpm@10.5.2",
+  "engines": {
+    "node": ">=21.2.0"
   }
 }
