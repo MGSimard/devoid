@@ -34,10 +34,10 @@ export function ThemeContextProvider({ children }: { children: React.ReactNode }
         return storedTheme;
       }
 
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
     } catch (error) {
       console.error("Error accessing theme preferences:", error);
-      return "light";
+      return "dark";
     }
   });
 
