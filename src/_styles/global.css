@@ -50,7 +50,7 @@ body {
 #app {
   display: flex;
   flex-direction: column;
-  min-height: 300dvh;
+  min-height: 100dvh;
 }
 nav,
 header,
@@ -77,6 +77,19 @@ nav ul {
 }
 main {
   flex-grow: 1;
+}
+nav,
+header,
+section,
+footer {
+  padding-right: var(--sitePadding);
+  padding-left: var(--sitePadding);
+  background: red;
+}
+.header-content,
+.section-content {
+  margin: 0 auto;
+  max-width: var(--siteMaxWidth);
 }
 footer {
 }
