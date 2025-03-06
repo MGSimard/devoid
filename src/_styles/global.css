@@ -84,7 +84,6 @@ section,
 footer {
   padding-right: var(--sitePadding);
   padding-left: var(--sitePadding);
-  background: red;
 }
 .header-content,
 .section-content {
