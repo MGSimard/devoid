@@ -113,7 +113,7 @@ section {
 #theme-toggle {
   position: fixed;
   bottom: var(--sitePadding);
-  right: var(--sitePadding);
+  right: 1.5ch;
 }
 /* DEFAULTS */
 img,
