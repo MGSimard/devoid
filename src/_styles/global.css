@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 :root {
   --siteMaxWidth: 1440px;
@@ -12,7 +12,7 @@
     "Satoshi", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell,
     Ubuntu, roboto, noto, arial, sans-serif;
   --headingFont: "Zodiak", Garamond, "Times New Roman", Georgia, serif;
-  --clrPrimary: #000;
+  --clrPrimary: #ff4000;
   --clrSecondary: #000;
 }
 :root[data-theme="dark"] {
@@ -143,5 +143,32 @@ details[open] summary {
 }
 /**/
 /* HERO INDEX PAGE */
+body:has(#hero) {
+  /* background: linear-gradient(
+    to bottom,
+    var(--clrPrimary) -100%,
+    transparent 10%,
+    transparent 90%,
+    var(--clrPrimary) 200%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom; */
+
+  box-shadow: inset 0 0 2rem var(--clrPrimary);
+}
 #hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+}
+#hero h1 {
+  font-size: 10rem;
+}
+#hero p {
+  color: var(--clrDetail);
 }
