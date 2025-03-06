@@ -18,18 +18,18 @@
 }
 :root[data-theme="dark"] {
   --clrBg: #000;
-  --clrBgLight: #000;
-  --clrHeading: #000;
-  --clrText: #000;
-  --clrDetail: #000;
+  --clrBgLight: #282828;
+  --clrHeading: #ffffff;
+  --clrText: #ffffff;
+  --clrDetail: #858585;
   --clrBorder: #000;
 }
 :root[data-theme="light"] {
-  --clrBg: #000;
-  --clrBgLight: #000;
+  --clrBg: #ffffff;
+  --clrBgLight: #d4d4d4;
   --clrHeading: #000;
   --clrText: #000;
-  --clrDetail: #000;
+  --clrDetail: #858585;
   --clrBorder: #000;
 }
 html {
