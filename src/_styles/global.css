@@ -11,7 +11,7 @@
   --coreFont:
     -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
     roboto, noto, arial, sans-serif;
-  --otherFontIdkFindaname: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --headingFont: "Zodiak", Garamond, "Times New Roman", Georgia, serif;
 
   --clrPrimary: #000;
   --clrSecondary: #000;
@@ -64,7 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-family: var(--headingFont);
   color: var(--clrHeading);
 }
 img,
@@ -103,6 +103,3 @@ details[open] summary {
   user-select: none;
 }
 /**/
-h1 {
-  font-family: "Zodiak-Black";
-}
