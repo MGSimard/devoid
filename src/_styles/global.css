@@ -9,8 +9,8 @@
   --sitePadding: 2rem;
 
   --coreFont:
-    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
-    roboto, noto, arial, sans-serif;
+    "Satoshi", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell,
+    Ubuntu, roboto, noto, arial, sans-serif;
   --headingFont: "Zodiak", Garamond, "Times New Roman", Georgia, serif;
 
   --clrPrimary: #000;
