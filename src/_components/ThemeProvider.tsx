@@ -87,14 +87,14 @@ export function ThemeContextProvider({ children }: { children: React.ReactNode }
 
   // Listen for system theme changes
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
 
     const handleChange = () => {
       try {
         // Only change if the user hasn't explicitly set a theme
         const hasUserPreference = localStorage.getItem(LOCAL_STORAGE_KEY) !== null;
         if (!hasUserPreference) {
-          setThemeState(mediaQuery.matches ? "dark" : "light");
+          setThemeState(mediaQuery.matches ? "light" : "dark");
         }
       } catch (error) {
         console.error("Error handling system theme change:", error);
