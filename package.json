@@ -20,6 +20,11 @@
     "url": "https://github.com/MGSimard/purposeless-website/issues"
   },
   "homepage": "https://github.com/MGSimard/purposeless-website#readme",
+  "scripts": {
+    "start": "vite --port 3000",
+    "build": "vite build && tsc",
+    "serve": "vite preview"
+  },
   "dependencies": {
     "@tanstack/react-router": "^1.112.0",
     "@tanstack/router-devtools": "^1.112.0",
