@@ -5,15 +5,13 @@ export function Header() {
     <header>
       <div id="header-content">
         <nav>
-          <Link to="/">
-            <img alt="X" />
-          </Link>
+          <Link to="/">〇</Link>
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/">NEXUS</Link>
             </li>
             <li>
-              <Link to="/about">ABOUT</Link>
+              <Link to="/insight">INSIGHT</Link>
             </li>
           </ul>
         </nav>

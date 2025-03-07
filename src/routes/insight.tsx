@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/about")({
-  component: PageAbout,
+export const Route = createFileRoute("/insight")({
+  component: PageInsight,
 });
 
-function PageAbout() {
+function PageInsight() {
   return (
     <main>
       <section>
