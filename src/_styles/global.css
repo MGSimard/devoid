@@ -62,7 +62,7 @@ body::after {
   pointer-events: none;
 }
 :root[data-theme="light"] body::after {
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.05) 51%);
   background-size: 100% 0.4rem;
 }
 @keyframes scanlines {
