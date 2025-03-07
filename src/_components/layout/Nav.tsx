@@ -8,10 +8,10 @@ export function Nav() {
       </Link>
       <ul>
         <li>
-          <Link to="/about">ABOUT</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li>
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/about">ABOUT</Link>
         </li>
       </ul>
     </nav>

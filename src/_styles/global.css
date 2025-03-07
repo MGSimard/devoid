@@ -76,10 +76,11 @@ body::after {
   max-width: var(--siteMaxWidth);
 }
 header {
-  flex-shrink: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 2ch 0 1ch 0;
+  text-align: center;
 }
 nav {
   display: flex;

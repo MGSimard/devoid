@@ -6,9 +6,15 @@ export const Route = createFileRoute("/")({
 
 function PageIndex() {
   return (
-    <main id="hero">
-      <h1>VOID</h1>
-      <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
-    </main>
+    <>
+      <header>
+        <span>.:::</span>
+        <h1>VOID</h1>
+        <span>:::.</span>
+      </header>
+      <main>
+        <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
+      </main>
+    </>
   );
 }
