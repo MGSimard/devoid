@@ -6,15 +6,8 @@ export const Route = createFileRoute("/about")({
 
 function PageAbout() {
   return (
-    <>
-      <header>
-        <span>.:::</span>
-        <h1>ABOUT</h1>
-        <span>:::.</span>
-      </header>
-      <main>
-        <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
-      </main>
-    </>
+    <main>
+      <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
+    </main>
   );
 }

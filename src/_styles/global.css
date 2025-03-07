@@ -35,18 +35,13 @@ html {
   }
 }
 body {
-  padding: var(--sitePadding) 4ch;
-  height: 100dvh;
+  padding: 0 var(--sitePadding);
+  min-height: 100dvh;
   font-size: 1.6rem;
-  text-shadow:
-    0 0 0.1rem var(--clrPrimary),
-    0 0 0.25rem var(--clrPrimary),
-    0 0 0.5rem var(--clrPrimary),
-    0 0 1rem var(--clrPrimary),
-    0 0 2.5rem var(--clrPrimary),
-    0 0 5rem var(--clrPrimary);
+  text-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
+    0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
   box-shadow: inset 0 0 2ch hsla(from var(--clrPrimary) h s l / 0.3);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 :root[data-theme="light"] body {
   text-shadow: none;
@@ -79,17 +74,23 @@ body::after {
   max-width: var(--siteMaxWidth);
 }
 header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+#header-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2ch 0 1ch 0;
-  text-align: center;
 }
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2ch;
+  padding: 2ch 0;
   text-transform: uppercase;
 }
 nav ul {
@@ -106,9 +107,9 @@ nav li a:not(.active) {
 }
 main {
   flex-grow: 1;
-  overflow-y: auto;
-  scrollbar-color: hsla(from var(--clrPrimary) h s l / 0.3) transparent;
-  scrollbar-width: thin;
+}
+main p {
+  height: 300dvh;
 }
 section {
   padding: 2ch 0;
@@ -125,7 +126,7 @@ h3,
 h4,
 h5,
 h6 {
-  /* font-weight: 100; */
+  font-size: 1.6rem;
 }
 img,
 svg {
