@@ -2,9 +2,7 @@
 
 # Task List
 
+- [ ] Moved to regular page layout insted of nested scroll container, need to move screen inset glow from body to a no-interact inset: 0; element
 - [ ] Metadata files
 - [ ] Fuck native title tooltip, come up with something else + keep aria-label
-- [ ] Find decent sitepadding
-- [ ] Scrollbar glow
-- [ ] Decide on setup to prevent main content glow from being cut by main frame
 - [ ] Font Preloads
