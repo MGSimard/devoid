@@ -29,7 +29,6 @@
 html {
   font-family: var(--coreFont);
   font-size: 62.5%;
-  font-weight: 100;
   color: var(--clrText);
   background: var(--clrBg);
   scroll-behavior: smooth;
