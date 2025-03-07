@@ -8,7 +8,7 @@ function PageInsight() {
   return (
     <main>
       <section>
-        <p>THIS WEBSITE SERVES PARTICULAR PURPOSE</p>
+        <p>THIS WEBSITE SERVES NO PARTICULAR PURPOSE</p>
       </section>
     </main>
   );
