@@ -7,7 +7,9 @@ export const Route = createFileRoute("/about")({
 function PageAbout() {
   return (
     <main>
-      <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
+      <section>
+        <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
+      </section>
     </main>
   );
 }
