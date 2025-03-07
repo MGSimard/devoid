@@ -8,7 +8,8 @@ function PageIndex() {
   return (
     <main>
       <section>
-        <p>THIS WEBSITE HAS NO PARTICULAR PURPOSE</p>
+        <h2>Void</h2>
+        <p>Text</p>
       </section>
     </main>
   );
