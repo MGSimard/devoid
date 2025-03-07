@@ -9,7 +9,6 @@ export function Header() {
     <header>
       <div id="header-content">
         <nav>
-          <Link to="/">〇</Link>
           <ul>
             <li>
               <Link to="/">NEXUS</Link>
