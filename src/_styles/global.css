@@ -6,7 +6,7 @@
 :root {
   --siteMaxWidth: 1440px;
   --sitePadding: 2ch;
-  --coreFont: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --coreFont: "JetBrains Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   --clrPrimary: #ff4000;
   --clrSecondary: #000;
 }
@@ -29,6 +29,7 @@
 html {
   font-family: var(--coreFont);
   font-size: 62.5%;
+  font-weight: 100;
   color: var(--clrText);
   background: var(--clrBg);
   scroll-behavior: smooth;
@@ -106,7 +107,6 @@ main {
   overflow-y: auto;
   scrollbar-color: hsla(from var(--clrPrimary) h s l / 0.3) transparent;
   scrollbar-width: thin;
-  border: 1px solid red;
 }
 section {
   padding: 2ch 0;
@@ -117,6 +117,14 @@ section {
   right: 1.5ch;
 }
 /* DEFAULTS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-weight: 100; */
+}
 img,
 svg {
   display: block;
