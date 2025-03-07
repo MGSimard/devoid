@@ -8,6 +8,7 @@ export const Route = createRootRoute({
       <Header />
       <Outlet />
       <ThemeToggle />
+      <div id="screen-glow"></div>
     </>
   ),
 });
