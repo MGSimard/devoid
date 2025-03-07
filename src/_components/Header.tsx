@@ -1,6 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { useLocation, Link } from "@tanstack/react-router";
 
 export function Header() {
+  const location = useLocation();
+  const displayPath = location.pathname.split("/").filter(Boolean);
+  const headerText = displayPath.length === 0 ? "NEXUS" : displayPath.join(" - ").toUpperCase();
+
   return (
     <header>
       <div id="header-content">
@@ -17,7 +21,7 @@ export function Header() {
         </nav>
         <div id="header-text">
           <span>.:::</span>
-          <h1>VOID</h1>
+          <h1>{headerText}</h1>
           <span>:::.</span>
         </div>
       </div>
