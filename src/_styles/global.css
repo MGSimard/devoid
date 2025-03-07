@@ -35,7 +35,6 @@ html {
   }
 }
 body {
-  padding: 0 var(--sitePadding);
   min-height: 100dvh;
   font-size: 1.6rem;
   text-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
@@ -72,12 +71,23 @@ body::after {
   z-index: 9999;
 }
 #app {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2ch;
   height: 100%;
+}
+* {
+  border: 1px solid red;
+}
+header,
+main {
+  padding: 0 var(--sitePadding);
+}
+#header-content,
+section {
+  margin: 0 auto;
   max-width: var(--siteMaxWidth);
+  width: 100%;
 }
 header {
   position: sticky;
@@ -85,6 +95,7 @@ header {
   right: 0;
   left: 0;
   text-align: center;
+  background: var(--clrBg);
   z-index: 1000;
 }
 #header-text {
@@ -117,9 +128,6 @@ main {
 }
 main p {
   height: 300dvh;
-}
-section {
-  padding: 2ch 0;
 }
 #theme-toggle {
   position: fixed;
