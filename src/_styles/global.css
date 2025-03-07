@@ -42,12 +42,6 @@ body {
     0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
   overflow-x: hidden;
 }
-#screen-glow {
-  position: fixed;
-  inset: 0;
-  box-shadow: inset 0 0 2ch hsla(from var(--clrPrimary) h s l / 0.3);
-  pointer-events: none;
-}
 :root[data-theme="light"] body {
   text-shadow: none;
 }
@@ -69,6 +63,13 @@ body::after {
   0% {
     background-position: 0 0.4rem;
   }
+}
+#screen-glow {
+  position: fixed;
+  inset: 0;
+  box-shadow: inset 0 0 2ch hsla(from var(--clrPrimary) h s l / 0.3);
+  pointer-events: none;
+  z-index: 9999;
 }
 #app {
   margin: 0 auto;
