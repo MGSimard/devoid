@@ -76,12 +76,10 @@ body::after {
   gap: 2ch;
   height: 100%;
 }
-* {
-  border: 1px solid red;
-}
 header,
 main {
-  padding: 0 var(--sitePadding);
+  padding-left: var(--sitePadding);
+  padding-right: var(--sitePadding);
 }
 #header-content,
 section {
@@ -94,8 +92,11 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  padding-top: 2ch;
+  padding-bottom: 2ch;
   text-align: center;
-  background: var(--clrBg);
+  text-transform: uppercase;
+  background: linear-gradient(var(--clrBg) calc(100% - 1ch), transparent);
   z-index: 1000;
 }
 #header-text {
@@ -108,8 +109,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2ch;
-  padding: 2ch 0;
-  text-transform: uppercase;
+  margin-bottom: 2ch;
 }
 nav ul {
   display: flex;
