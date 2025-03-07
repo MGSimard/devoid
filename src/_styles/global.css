@@ -132,7 +132,7 @@ main p {
 #theme-toggle {
   position: fixed;
   bottom: var(--sitePadding);
-  right: 1.5ch;
+  right: var(--sitePadding);
 }
 /* DEFAULTS */
 h1,
@@ -179,6 +179,15 @@ summary {
 }
 details[open] summary {
   margin-bottom: 1ch;
+}
+::selection {
+  color: var(--clrBg);
+  background: var(--clrPrimary);
+}
+::-moz-selection {
+  /* Can't mix both ::selection & moz */
+  color: var(--clrBg);
+  background: var(--clrPrimary);
 }
 .noselect {
   -webkit-touch-callout: none;
