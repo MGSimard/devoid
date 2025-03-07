@@ -21,7 +21,7 @@ export function Header() {
         </nav>
         <div id="header-text">
           <span>.:::</span>
-          <h1>{headerText}</h1>
+          <h1 className="spaced">{headerText}</h1>
           <span>:::.</span>
         </div>
       </div>
