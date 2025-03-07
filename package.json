@@ -1,5 +1,5 @@
 {
-  "name": "void",
+  "name": "Devoid",
   "version": "0.1.0",
   "private": true,
   "author": "MGSimard <mgsimard.dev@gmail.com> (https://mgsimard.dev)",
@@ -8,18 +8,18 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MGSimard/void.git"
+    "url": "git+https://github.com/MGSimard/devoid.git"
   },
   "keywords": [
     "react",
     "vite",
     "typescript",
-    "void"
+    "devoid"
   ],
   "bugs": {
-    "url": "https://github.com/MGSimard/void/issues"
+    "url": "https://github.com/MGSimard/devoid/issues"
   },
-  "homepage": "https://github.com/MGSimard/void#readme",
+  "homepage": "https://github.com/MGSimard/devoid#readme",
   "scripts": {
     "start": "vite --port 3000",
     "build": "vite build && tsc",

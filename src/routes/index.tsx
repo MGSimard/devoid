@@ -16,7 +16,7 @@ function PageIndex() {
 
 const Pre = () => {
   return (
-    <pre aria-label="VOID">{`██    ██  ██████  ██ ██████
+    <pre aria-label="DEVOID">{`██    ██  ██████  ██ ██████
 ██    ██ ██    ██ ██ ██   ██
 ██    ██ ██    ██ ██ ██   ██
  ██  ██  ██    ██ ██ ██   ██
