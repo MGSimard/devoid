@@ -5,6 +5,8 @@ export const Route = createFileRoute("/insight")({
 });
 
 function PageInsight() {
+  throw new Error("Test");
+
   return (
     <main>
       <section>
