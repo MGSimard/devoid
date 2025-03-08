@@ -19,15 +19,11 @@ function PageIndex() {
         <a href="#" className="link">
           Test Link
         </a>
-        <h2>Tooltip & Notification planning</h2>
-        <ul>
-          <li>- Purely ASCII, character borders</li>
-          <li>- Calculate frame width and height depending on character count</li>
-          <li>- Setup a max width for linebreaks</li>
-          <li>- Consider viewport width, zoom level etc</li>
-        </ul>
       </section>
       <section>
+        <h2>Notification component test</h2>
+        <h2>Notification component test</h2>
+        <h2>Notification component test</h2>
         <h2>Notification component test</h2>
         <Notification message="This is a message test" />
         <Notification message="This is a longer message test" />
