@@ -2,12 +2,9 @@ import { useLocation, Link } from "@tanstack/react-router";
 
 export function Header() {
   const location = useLocation();
-  const displayPath = location.pathname.split("/").filter(Boolean);
   const headerText = `[ ${
-    displayPath.length === 0 ? "N E X U S" : [...displayPath.join(" _ ").toUpperCase()].join(" ")
+    location.pathname === "/" ? "N E X U S" : location.pathname.split("/")[1]?.toUpperCase().split("").join(" ") || ""
   } ]`;
-
-  // Can consider a breadcrumb setup later for the header title _ stuff _ otherstuff
 
   return (
     <header>
@@ -25,6 +22,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
+        {/* Need to set it up so that [] brackets are always visible and ellipsis only applies to headerText */}
         <div id="header-text">
           <span>.:::</span>
           <h1>{headerText}</h1>
