@@ -40,7 +40,7 @@ body {
     0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
   overflow-x: hidden;
 }
-:root[data-theme="light"] body {
+[data-theme="light"] body {
   text-shadow: none;
 }
 body::after {
@@ -53,7 +53,7 @@ body::after {
   z-index: 10000;
   pointer-events: none;
 }
-:root[data-theme="light"] body::after {
+[data-theme="light"] body::after {
   background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.05) 51%);
   background-size: 100% 0.4rem;
 }
@@ -223,8 +223,8 @@ pre {
   color: var(--clrBg);
   background: var(--clrPrimary);
 }
-:root[data-theme="dark"] .link:hover,
-.link:focus-visible {
+[data-theme="dark"] .link:hover,
+[data-theme="dark"] .link:focus-visible {
   text-shadow: none;
   box-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
     0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
@@ -238,21 +238,6 @@ pre {
   filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
 .notification {
-  background: var(--clrBg);
-  clip-path: polygon(
-    /* Topleft Down */ 0.15ch 1.45ch,
-    /* Topleft Up */ 1.35ch 0.56ch,
-    /* [ bottom */ 13.13ch 0.56ch,
-    /* [ top */ 13.13ch 0.1ch,
-    /* ] top */ calc(100% - 13.13ch) 0.1ch,
-    /* ] bottom */ calc(100% - 13.13ch) 0.56ch,
-    /* Topright Up */ calc(100% - 1.35ch) 0.56ch,
-    /* Topright Down */ calc(100% - 0.15ch) 1.45ch,
-    /* Bottomright up */ calc(100% - 0.15ch) calc(100% - 1.18ch),
-    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.78ch),
-    /* Bottomleft down */ 1.2ch calc(100% - 0.78ch),
-    /* Bottomleft up */ 0.15ch calc(100% - 1.18ch)
-  );
   transition: opacity 0.2s ease;
 }
 ol[data-sonner-toaster] li[data-expanded="false"]:not([data-index="0"]) .notification-wrapper {
