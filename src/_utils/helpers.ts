@@ -1,28 +1,41 @@
-export function wrapText33(sentence: string, lineLength: number): string[] {
-  const words = sentence.split(" ");
-  const maxLength = lineLength - 4; // Minus || frames and space paddings (4)
+export function wrapText33(msg: string, lineLength: number): string[] {
+  const words = msg.trim().split(/\s+/);
+  const maxContentLength = lineLength - 4; // Minus both frames and both space paddings
 
-  // TODO: WORDBREAKS (especially hyphenizing)
+  const formatLine = (text: string) => {
+    return `| ${text.padEnd(maxContentLength, " ")} |`;
+  };
 
-  const lines = [];
+  const lines: string[] = [];
   let currentLine = "";
+
   for (const word of words) {
-    // Check if adding the word would exceed maxLength
-    if (currentLine.length + word.length + 1 > maxLength) {
-      // Push the current line, trimmed and padded to maxLength with "|" added to the start and end
-      lines.push(`| ${currentLine.trim().padEnd(maxLength, " ")} |`);
-      // Start a new line with the current word
-      currentLine = word + " ";
+    const wordLength = word.length;
+    const currentLineLength = currentLine.length;
+
+    if (currentLineLength + wordLength + (currentLineLength ? 1 : 0) <= maxContentLength) {
+      currentLine += (currentLineLength ? " " : "") + word;
     } else {
-      // Add the word to the current line
-      currentLine += word + " ";
+      if (currentLine) lines.push(formatLine(currentLine));
+      currentLine = "";
+
+      if (wordLength > maxContentLength) {
+        const chunkSize = maxContentLength - 1;
+        for (let i = 0; i < wordLength; i += chunkSize) {
+          const chunk = word.slice(i, i + chunkSize);
+          if (i + chunkSize >= wordLength) {
+            currentLine = chunk;
+          } else {
+            lines.push(formatLine(chunk + "-"));
+          }
+        }
+      } else {
+        currentLine = word;
+      }
     }
   }
 
-  // Add any remaining text to lines, trimmed, padded, and wrapped in "|"
-  if (currentLine.trim()) {
-    lines.push(`| ${currentLine.trim().padEnd(maxLength, " ")} |`);
-  }
+  if (currentLine) lines.push(formatLine(currentLine));
 
   return lines;
 }
