@@ -32,7 +32,7 @@ function PageIndex() {
         <Toast message="This is a message test" />
         <Toast message="This is a longer message test" />
         <Toast message="This is a much longer message test, this is a much longer message test, this is a much longer message test" />
-        <Toast message="This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooong word message test (wordbreak not implemented yet)" />
+        <Toast message="This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooong word mess wwwww (wordbreak not implemented yet)" />
         <Toast message="This is a loooooooooooooooooooooooong word message test (wordbreak not implemented yet)" />
       </section>
     </main>

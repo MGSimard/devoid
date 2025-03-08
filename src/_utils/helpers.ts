@@ -1,70 +1,76 @@
 export function wrapText33(msg: string, lineLength: number): string[] {
+  // Constants for hyphenation rules
+  const MIN_CHARS_BEFORE_HYPHEN = 3;
+  const MIN_CHARS_AFTER_HYPHEN = 3;
+
   const words = msg.trim().split(/\s+/);
-  const maxContentLength = lineLength - 4; // Minus both frames and both space paddings
+  const maxContentLength = lineLength - 4; // Minus both | and both space pads
   const lines: string[] = [];
   let currentLine = "";
 
-  // Format and add line to output
-  const addLine = (text: string) => {
+  // Add formatted line to output array
+  const addLine = (text: string): void => {
     lines.push(`| ${text.padEnd(maxContentLength, " ")} |`);
   };
 
-  // Process word chunks that are too long for a single line
-  const processLongWord = (word: string, startIndex = 0): string => {
-    const chunkSize = maxContentLength - 1; // -1 for hyphen
-
-    for (let i = startIndex; i < word.length; i += chunkSize) {
-      if (i + chunkSize >= word.length) {
-        return word.slice(i);
-      }
-
-      addLine(word.slice(i, i + chunkSize) + "-");
-    }
-
-    return "";
-  };
-
-  // Helper to add word with space if needed
+  // Add a word to a line with appropriate spacing
   const addWordToLine = (line: string, word: string): string => {
     return line + (line ? " " : "") + word;
   };
 
-  // Hyphenation rules
-  const MIN_CHARS_BEFORE_HYPHEN = 3;
-  const MIN_CHARS_AFTER_HYPHEN = 3;
+  // Process words that exceed maximum line length
+  const breakLongWord = (word: string): string => {
+    const chunkSize = maxContentLength - 1; // Space for hyphen
+    let remaining = word;
+    let result = "";
+
+    while (remaining.length > maxContentLength) {
+      const chunk = remaining.slice(0, chunkSize);
+      addLine(chunk + "-");
+      remaining = remaining.slice(chunkSize);
+    }
+
+    return remaining;
+  };
 
   for (const word of words) {
-    const availableSpace = maxContentLength - currentLine.length - (currentLine ? 1 : 0);
+    const spaceNeeded = currentLine ? 1 : 0;
+    const availableSpace = maxContentLength - currentLine.length - spaceNeeded;
 
-    // Case 1: Word fits in current line
+    // Case 1: Word fits on current line
     if (word.length <= availableSpace) {
       currentLine = addWordToLine(currentLine, word);
       continue;
     }
 
-    // Case 2: Smart hyphenation when enough space exists and rules allow
-    if (
-      word.length >= 8 &&
+    // Case 2: Smart hyphenation if it meets minimum character requirements
+    const canHyphenate =
       availableSpace >= MIN_CHARS_BEFORE_HYPHEN + 1 && // +1 for hyphen
-      word.length - (availableSpace - 1) >= MIN_CHARS_AFTER_HYPHEN
-    ) {
-      // Add first part with hyphen to current line
-      currentLine = addWordToLine(currentLine, word.slice(0, availableSpace - 1) + "-");
+      word.length - availableSpace + 1 >= MIN_CHARS_AFTER_HYPHEN;
+
+    if (canHyphenate) {
+      const hyphenPos = availableSpace - 1;
+      currentLine = addWordToLine(currentLine, word.slice(0, hyphenPos) + "-");
       addLine(currentLine);
 
-      // Process remainder of word
-      const secondPart = word.slice(availableSpace - 1);
-      currentLine = secondPart.length <= maxContentLength ? secondPart : processLongWord(secondPart);
+      // Handle remainder
+      const remainder = word.slice(hyphenPos);
+      currentLine = remainder.length <= maxContentLength ? remainder : breakLongWord(remainder);
       continue;
     }
 
-    // Case 3: Start new line
-    if (currentLine) addLine(currentLine);
+    // Case 3: Start a new line
+    if (currentLine) {
+      addLine(currentLine);
+      currentLine = "";
+    }
 
-    // Handle word longer than line length
-    currentLine = word.length > maxContentLength ? processLongWord(word) : word;
+    // Handle word too long for a single line
+    currentLine = word.length > maxContentLength ? breakLongWord(word) : word;
   }
 
+  // Add final line if not empty
   if (currentLine) addLine(currentLine);
+
   return lines;
 }
