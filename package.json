@@ -22,6 +22,7 @@
   "homepage": "https://github.com/MGSimard/devoid#readme",
   "scripts": {
     "start": "vite --port 3000",
+    "expose": "vite --port 3000 --host",
     "build": "vite build && tsc",
     "serve": "vite preview",
     "lint": "eslint ."
