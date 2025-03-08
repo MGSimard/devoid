@@ -14,7 +14,7 @@
  * Content lines should always have at least one space of padding on right
  * Linebreak if text line is greater than 29 characters
  * Always fill remaining space with spacebars to finish 33 length
- * Hyphen break long words
+ * Hyphen break words if pre/post lines would each have at least 3 characters
  *
  *
  */
