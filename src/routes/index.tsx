@@ -30,7 +30,10 @@ function PageIndex() {
       </section>
       <section>
         <h2>Dynamic component test</h2>
-        <Toast />
+        <Toast message="This is a message test" />
+        <Toast message="This is a longer message test" />
+        <Toast message="This is a much longer message test, this is a much longer message test, this is a much longer message test" />
+        <Toast message="This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooong word message test" />
       </section>
     </main>
   );

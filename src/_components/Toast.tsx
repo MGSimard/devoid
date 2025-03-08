@@ -19,6 +19,25 @@
  *
  */
 
-export function Toast() {
-  return <pre></pre>;
+import { wrapText33 } from "@/_utils/helpers";
+
+type TypeEnum = "info" | "warning" | "success" | "error" | "loading";
+interface PropTypes {
+  message: string;
+  type?: TypeEnum;
+}
+
+export function Toast({ message }: PropTypes) {
+  const firstLine = ".::::::::::: [ALERT] :::::::::::.";
+  const padddLine = "|                               |";
+  const lasttLine = "'-------------------------------'";
+  const contentLines = wrapText33(message);
+
+  return (
+    <pre>{`${firstLine}
+${padddLine}
+${contentLines.join("\n")}
+${padddLine}
+${lasttLine}`}</pre>
+  );
 }
