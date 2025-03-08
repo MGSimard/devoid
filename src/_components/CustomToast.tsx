@@ -6,15 +6,15 @@ interface PropTypes {
   type?: TypeEnum;
 }
 
-export function CustomToast({ message }: PropTypes) {
+export function CustomToast({ message, type }: PropTypes) {
   const firstLine = ".::::::::::: [ALERT] :::::::::::.";
   const padddLine = "|                               |";
   const lasttLine = "'-------------------------------'";
   const contentLines = wrapText33(message, firstLine.length); // Send message and content line length we want
 
   return (
-    <div className="notification-wrapper">
-      <pre className="notification">{`${firstLine}
+    <div className="custom-toast-wrapper">
+      <pre className={`custom-toast${type ? ` ct-${type}` : ""}`}>{`${firstLine}
 ${padddLine}
 ${contentLines.join("\n")}
 ${padddLine}

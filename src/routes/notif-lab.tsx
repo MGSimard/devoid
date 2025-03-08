@@ -17,6 +17,11 @@ function PageNotifLab() {
         <button type="button" onClick={() => toast.custom(() => <CustomToast message="A generic feedback message." />)}>
           Test Custom Sonner
         </button>
+        <button
+          type="button"
+          onClick={() => toast.custom(() => <CustomToast message="A generic feedback message." type="error" />)}>
+          Test Custom ERROR Sonner
+        </button>
         <h2>Notification component</h2>
         <CustomToast message="This is a much longer message test, this is a much longer message test, this is a much longer message test" />
         <CustomToast message="This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooong message test" />
