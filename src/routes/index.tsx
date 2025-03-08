@@ -22,9 +22,6 @@ function PageIndex() {
       </section>
       <section>
         <h2>Notification component test</h2>
-        <h2>Notification component test</h2>
-        <h2>Notification component test</h2>
-        <h2>Notification component test</h2>
         <Notification message="This is a message test" />
         <Notification message="This is a longer message test" />
         <Notification message="This is a much longer message test, this is a much longer message test, this is a much longer message test" />

@@ -231,9 +231,6 @@ pre {
 }
 /**/
 /* NOTIFICATION */
-.notification-wrapper {
-  margin-top: -10ch;
-}
 [data-theme="light"] .notification-wrapper {
   filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
