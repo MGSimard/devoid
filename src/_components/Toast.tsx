@@ -31,7 +31,7 @@ export function Toast({ message }: PropTypes) {
   const firstLine = ".::::::::::: [ALERT] :::::::::::.";
   const padddLine = "|                               |";
   const lasttLine = "'-------------------------------'";
-  const contentLines = wrapText33(message);
+  const contentLines = wrapText33(message, firstLine.length); // Send message and content line length we want
 
   return (
     <pre>{`${firstLine}

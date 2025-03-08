@@ -1,6 +1,6 @@
-export function wrapText33(sentence: string, totalLength: number = 33): string[] {
+export function wrapText33(sentence: string, lineLength: number): string[] {
   const words = sentence.split(" ");
-  const maxLength = totalLength - 4; // Minus || frames and space paddings (4)
+  const maxLength = lineLength - 4; // Minus || frames and space paddings (4)
 
   // TODO: WORDBREAKS (especially hyphenizing)
 
