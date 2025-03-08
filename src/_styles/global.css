@@ -235,11 +235,7 @@ pre {
   filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
 [data-theme="dark"] .notification-wrapper {
-  filter: drop-shadow(0 0 0.1rem hsla(from var(--clrPrimary) h s l / 0.2))
-    drop-shadow(0 0 0.25rem hsla(from var(--clrPrimary) h s l / 0.2))
-    drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2))
-    drop-shadow(0 0 2.5rem hsla(from var(--clrPrimary) h s l / 0.2))
-    drop-shadow(0 0 5rem hsla(from var(--clrPrimary) h s l / 0.2));
+  filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
 .notification {
   background: var(--clrBg);
@@ -257,4 +253,14 @@ pre {
     /* Bottomleft down */ 1.2ch calc(100% - 0.78ch),
     /* Bottomleft up */ 0.15ch calc(100% - 1.18ch)
   );
+  transition: opacity 0.2s ease;
+}
+ol[data-sonner-toaster] li[data-expanded="false"]:not([data-index="0"]) .notification-wrapper {
+  filter: none;
+}
+ol[data-sonner-toaster] li[data-expanded="false"][data-index="1"] .notification {
+  opacity: 0.5;
+}
+ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .notification {
+  opacity: 0.25;
 }
