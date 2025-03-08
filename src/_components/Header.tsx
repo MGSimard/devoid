@@ -3,7 +3,7 @@ import { useLocation, Link } from "@tanstack/react-router";
 export function Header() {
   const location = useLocation();
   const headerText = `[ ${
-    location.pathname === "/" ? "N E X U S" : location.pathname.split("/")[1]?.toUpperCase().split("").join(" ") || ""
+    location.pathname === "/" ? "N E X U S" : location.pathname.split("/")[1]?.toUpperCase().split("").join(" ") ?? ""
   } ]`;
 
   return (
