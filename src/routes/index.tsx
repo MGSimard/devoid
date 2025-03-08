@@ -25,6 +25,7 @@ function PageIndex() {
         <Notification />
         <Notification2 />
         <Notification3 />
+        <p>We'll see if I want the text centered later</p>
       </section>
     </main>
   );
