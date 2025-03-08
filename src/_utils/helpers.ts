@@ -14,32 +14,42 @@ export function wrapText33(msg: string, lineLength: number): string[] {
     const chunkSize = maxContentLength - 1; // -1 for hyphen
 
     for (let i = startIndex; i < word.length; i += chunkSize) {
-      const isLastChunk = i + chunkSize >= word.length;
-
-      if (isLastChunk) {
+      if (i + chunkSize >= word.length) {
         return word.slice(i);
       }
 
       addLine(word.slice(i, i + chunkSize) + "-");
     }
 
-    return ""; // Should never reach here if function is used correctly
+    return "";
   };
 
+  // Helper to add word with space if needed
+  const addWordToLine = (line: string, word: string): string => {
+    return line + (line ? " " : "") + word;
+  };
+
+  // Hyphenation rules
+  const MIN_CHARS_BEFORE_HYPHEN = 3;
+  const MIN_CHARS_AFTER_HYPHEN = 3;
+
   for (const word of words) {
-    const currentLineLength = currentLine.length;
-    const spaceNeeded = currentLineLength ? 1 : 0;
-    const availableSpace = maxContentLength - currentLineLength - spaceNeeded;
+    const availableSpace = maxContentLength - currentLine.length - (currentLine ? 1 : 0);
 
     // Case 1: Word fits in current line
     if (word.length <= availableSpace) {
-      currentLine += (spaceNeeded ? " " : "") + word;
+      currentLine = addWordToLine(currentLine, word);
       continue;
     }
 
-    // Case 2: Smart hyphenation when enough space exists
-    if (word.length >= 8 && availableSpace >= 4) {
-      currentLine += (spaceNeeded ? " " : "") + word.slice(0, availableSpace - 1) + "-";
+    // Case 2: Smart hyphenation when enough space exists and rules allow
+    if (
+      word.length >= 8 &&
+      availableSpace >= MIN_CHARS_BEFORE_HYPHEN + 1 && // +1 for hyphen
+      word.length - (availableSpace - 1) >= MIN_CHARS_AFTER_HYPHEN
+    ) {
+      // Add first part with hyphen to current line
+      currentLine = addWordToLine(currentLine, word.slice(0, availableSpace - 1) + "-");
       addLine(currentLine);
 
       // Process remainder of word
@@ -55,8 +65,6 @@ export function wrapText33(msg: string, lineLength: number): string[] {
     currentLine = word.length > maxContentLength ? processLongWord(word) : word;
   }
 
-  // Add the last line if not empty
   if (currentLine) addLine(currentLine);
-
   return lines;
 }
