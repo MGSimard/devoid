@@ -233,15 +233,16 @@ pre {
 /* NOTIFICATION */
 .notification-wrapper {
   margin-top: -10ch;
-  filter: drop-shadow(0 0 0.1rem var(--clrPrimary)) drop-shadow(0 0 0.25rem var(--clrPrimary))
-    drop-shadow(0 0 1rem var(--clrPrimary)) drop-shadow(0 0 2.5rem hsla(from var(--clrPrimary) h s l / 0.2))
+  filter: drop-shadow(0 0 0.1rem hsla(from var(--clrPrimary) h s l / 0.2))
+    drop-shadow(0 0 0.25rem hsla(from var(--clrPrimary) h s l / 0.2))
+    drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2))
+    drop-shadow(0 0 2.5rem hsla(from var(--clrPrimary) h s l / 0.2))
     drop-shadow(0 0 5rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
 .notification {
-  background: blue;
-  /* box-shadow: inset 0 0 0.1rem var(--clrPrimary), inset 0 0 0.25rem var(--clrPrimary),
-    inset 0 0 0.5rem var(--clrPrimary), inset 0 0 1rem var(--clrPrimary), inset 0 0 2.5rem var(--clrPrimary),
-    inset 0 0 5rem var(--clrPrimary); */
+  background: var(--clrBg);
+  box-shadow: inset 0 0 0.1rem var(--clrPrimary), inset 0 0 0.25rem var(--clrPrimary),
+    inset 0 0 0.5rem var(--clrPrimary), inset 0 0 1rem var(--clrPrimary), inset 0 0 2.5rem var(--clrPrimary);
   clip-path: polygon(
     /* Topleft Down */ 0.15ch 1.45ch,
     /* Topleft Up */ 1.35ch 0.56ch,
