@@ -221,4 +221,5 @@ pre {
 /* NOTIFICATION */
 .notification {
   background: var(--clrBg);
+  /* Probably won't use this since it'll look weird idk we'll see figure out BG or filter*/
 }
