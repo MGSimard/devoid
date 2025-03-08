@@ -13,10 +13,12 @@ export function Notification({ message }: PropTypes) {
   const contentLines = wrapText33(message, firstLine.length); // Send message and content line length we want
 
   return (
-    <pre className="notification">{`${firstLine}
+    <div className="notification-wrapper">
+      <pre className="notification">{`${firstLine}
 ${padddLine}
 ${contentLines.join("\n")}
 ${padddLine}
 ${lasttLine}`}</pre>
+    </div>
   );
 }

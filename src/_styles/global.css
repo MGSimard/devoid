@@ -231,10 +231,17 @@ pre {
 }
 /**/
 /* NOTIFICATION */
-
+.notification-wrapper {
+  margin-top: -10ch;
+  filter: drop-shadow(0 0 0.1rem var(--clrPrimary)) drop-shadow(0 0 0.25rem var(--clrPrimary))
+    drop-shadow(0 0 1rem var(--clrPrimary)) drop-shadow(0 0 2.5rem hsla(from var(--clrPrimary) h s l / 0.2))
+    drop-shadow(0 0 5rem hsla(from var(--clrPrimary) h s l / 0.2));
+}
 .notification {
-  background: red;
-  box-shadow: 0 0 4rem blue;
+  background: blue;
+  /* box-shadow: inset 0 0 0.1rem var(--clrPrimary), inset 0 0 0.25rem var(--clrPrimary),
+    inset 0 0 0.5rem var(--clrPrimary), inset 0 0 1rem var(--clrPrimary), inset 0 0 2.5rem var(--clrPrimary),
+    inset 0 0 5rem var(--clrPrimary); */
   clip-path: polygon(
     /* Topleft Down */ 0.34ch 1.45ch,
     /* Topleft Up */ 1.45ch 0.76ch,
@@ -244,11 +251,9 @@ pre {
     /* ] bottom */ calc(100% - 13.3ch) 0.76ch,
     /* Topright Up */ calc(100% - 1.45ch) 0.76ch,
     /* Topright Down */ calc(100% - 0.34ch) 1.45ch,
-    /* Topright Around Dot1 */ calc(100% - 0.34ch) 1.45ch,
-    /* Topright Around Dot2 */ calc(100% - 0.41ch) 1.5ch,
-    /* Bottomright up */ calc(100% - 0.41ch) calc(100% - 1.27ch),
-    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.87ch),
-    /* Bottomleft down */ 1.2ch calc(100% - 0.87ch),
-    /* Bottomleft up */ 0.34ch calc(100% - 1.27ch)
+    /* Bottomright up */ calc(100% - 0.34ch) calc(100% - 1.15ch),
+    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.95ch),
+    /* Bottomleft down */ 1.2ch calc(100% - 0.95ch),
+    /* Bottomleft up */ 0.41ch calc(100% - 1.15ch)
   );
 }
