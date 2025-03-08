@@ -129,6 +129,9 @@ section {
   align-items: center;
 }
 section:not(:last-child) {
+  margin-bottom: 4ch;
+}
+section > *:not(:last-child) {
   margin-bottom: 2ch;
 }
 #theme-toggle {
