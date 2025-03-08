@@ -16,6 +16,9 @@ function PageIndex() {
         <SmallPre />
       </section>
       <section>
+        <a href="#" className="link">
+          Test Link
+        </a>
         <h2>Tooltip & Notification planning</h2>
         <ul>
           <li>- Purely ASCII, character borders</li>

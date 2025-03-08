@@ -190,6 +190,9 @@ summary {
 details[open] summary {
   margin-bottom: 1ch;
 }
+pre {
+  font-family: var(--coreFont);
+}
 ::selection {
   color: var(--clrBg);
   background: var(--clrPrimary);
@@ -210,9 +213,19 @@ details[open] summary {
 .spaced {
   letter-spacing: 1ch;
 }
-pre {
-  font-family: var(--coreFont);
+.link {
+  /* Something else here to distinguish */
 }
+.link:hover {
+  color: var(--clrBg);
+  background: var(--clrPrimary);
+}
+:root[data-theme="dark"] .link:hover {
+  text-shadow: none;
+  box-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
+    0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
+}
+
 /**/
 /* NOTIFICATION */
 .notification {
