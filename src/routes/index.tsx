@@ -12,6 +12,10 @@ function PageIndex() {
         <Pre />
       </section>
       <section>
+        <h2>Testing mobile bullshit</h2>
+        <SmallPre />
+      </section>
+      <section>
         <h2>Tooltip & Notification planning</h2>
         <ul>
           <li>- Purely ASCII, character borders</li>
@@ -48,6 +52,19 @@ function Pre() {
 ███    ███   ███    █▄  ███    ███ ███    ███ ███  ███    ███
 ███   ▄███   ███    ███ ███    ███ ███    ███ ███  ███   ▄███
 ████████▀    ██████████  ▀██████▀   ▀██████▀  █▀   ████████▀`}</pre>
+  );
+}
+
+function SmallPre() {
+  return (
+    <pre aria-label="DEVOID">{`████████▄     ▄████████
+███   ▀███   ███    ███
+███    ███   ███    █▀
+███    ███  ▄███▄▄▄
+███    ███ ▀▀███▀▀▀
+███    ███   ███    █▄
+███   ▄███   ███    ███
+████████▀    ██████████`}</pre>
   );
 }
 

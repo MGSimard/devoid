@@ -210,6 +210,9 @@ details[open] summary {
 .spaced {
   letter-spacing: 1ch;
 }
+pre {
+  font-family: var(--coreFont);
+}
 /**/
 /* NOTIFICATION */
 .notification {
