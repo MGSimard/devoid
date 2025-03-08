@@ -35,6 +35,7 @@ html {
   }
 }
 body {
+  max-width: 100vw;
   font-size: 1.6rem;
   text-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
     0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
