@@ -28,14 +28,7 @@ function PageIndex() {
         </ul>
       </section>
       <section>
-        <h2>Notification</h2>
-        <p>Bit like sonner? We'll see if I want the text centered later</p>
-        <Notification />
-        <Notification2 />
-        <Notification3 />
-      </section>
-      <section>
-        <h2>Dynamic component test</h2>
+        <h2>Notification component test</h2>
         <Toast message="This is a message test" />
         <Toast message="This is a longer message test" />
         <Toast message="This is a much longer message test, this is a much longer message test, this is a much longer message test" />
@@ -68,36 +61,5 @@ function SmallPre() {
 ███    ███   ███    █▄
 ███   ▄███   ███    ███
 ████████▀    ██████████`}</pre>
-  );
-}
-
-function Notification() {
-  return (
-    <pre>{`.::::::::::: [ALERT] :::::::::::.
-|                               |
-| This is an example alert      |
-|                               |
-'-------------------------------'`}</pre>
-  );
-}
-
-function Notification2() {
-  return (
-    <pre>{`.::::::::::: [ALERT] :::::::::::.
-|                               |
-| This is also an example alert |
-|                               |
-'-------------------------------'`}</pre>
-  );
-}
-
-function Notification3() {
-  return (
-    <pre>{`.::::::::::: [ALERT] :::::::::::.
-|                               |
-| This is yet another example   |
-| alert                         |
-|                               |
-'-------------------------------'`}</pre>
   );
 }
