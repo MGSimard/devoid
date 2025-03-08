@@ -254,6 +254,6 @@ pre {
     /* Bottomright up */ calc(100% - 0.34ch) calc(100% - 1.15ch),
     /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.95ch),
     /* Bottomleft down */ 1.2ch calc(100% - 0.95ch),
-    /* Bottomleft up */ 0.41ch calc(100% - 1.15ch)
+    /* Bottomleft up */ 0.34ch calc(100% - 1.15ch)
   );
 }
