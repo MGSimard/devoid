@@ -211,11 +211,6 @@ details[open] summary {
   letter-spacing: 1ch;
 }
 /**/
-/* TODO: REMOVE */
-pre {
-  text-align: unset;
-  margin-bottom: 2ch;
-}
 /* NOTIFICATION */
 .notification {
   background: var(--clrBg);

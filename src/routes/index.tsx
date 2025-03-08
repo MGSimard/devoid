@@ -22,11 +22,10 @@ function PageIndex() {
       </section>
       <section>
         <h2>Notification</h2>
-        <p>Bit like sonner?</p>
+        <p>Bit like sonner? We'll see if I want the text centered later</p>
         <Notification />
         <Notification2 />
         <Notification3 />
-        <p>We'll see if I want the text centered later</p>
       </section>
       <section>
         <h2>Dynamic component test</h2>
