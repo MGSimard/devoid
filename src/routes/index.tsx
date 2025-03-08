@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toast } from "@/_components/Toast";
 
 export const Route = createFileRoute("/")({
   component: PageIndex,
@@ -26,6 +27,10 @@ function PageIndex() {
         <Notification2 />
         <Notification3 />
         <p>We'll see if I want the text centered later</p>
+      </section>
+      <section>
+        <h2>Dynamic component test</h2>
+        <Toast />
       </section>
     </main>
   );
