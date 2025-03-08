@@ -22,7 +22,6 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        {/* Need to set it up so that [] brackets are always visible and ellipsis only applies to headerText */}
         <div id="header-text">
           <span>.:::</span>
           <h1>{headerText}</h1>
