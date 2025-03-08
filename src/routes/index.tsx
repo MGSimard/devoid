@@ -23,6 +23,8 @@ function PageIndex() {
         <h2>Notification</h2>
         <p>Bit like sonner?</p>
         <Notification />
+        <Notification2 />
+        <Notification3 />
       </section>
     </main>
   );
@@ -41,28 +43,33 @@ function Pre() {
   );
 }
 
-function Tooltip() {
+function Notification() {
   return (
-    <pre>{`**********************************************************
-* Monospace, calc char amount, adjust frame width    *
-* and then adjust the amount of asterixes for emulated   *
-* space in the tooltip. Also have to consider current    *
-* viewport width, if position would render outside       *
-* the viewport, current screen zoom relative to viewport *
-* width etc.                                             *
-**********************************************************`}</pre>
+    <pre>{`.::::::::::: [ALERT] :::::::::::.
+|                               |
+| This is an example alert      |
+|                               |
+'-------------------------------'`}</pre>
   );
 }
 
-function Notification() {
+function Notification2() {
   return (
-    <pre>{`.::::::::::: [NOTIFICATION] :::::::::::.
-|                                      |
-| Would pop up similarly to Sonner     |
-| Again, adjust frame character length |
-| depending on inner chars with a max  |
-| width?                               |
-|                                      |
-'--------------------------------------'`}</pre>
+    <pre>{`.::::::::::: [ALERT] :::::::::::.
+|                               |
+| This is also an example alert |
+|                               |
+'-------------------------------'`}</pre>
+  );
+}
+
+function Notification3() {
+  return (
+    <pre>{`.::::::::::: [ALERT] :::::::::::.
+|                               |
+| This is yet another example   |
+| alert                         |
+|                               |
+'-------------------------------'`}</pre>
   );
 }
