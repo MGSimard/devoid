@@ -92,7 +92,7 @@ function Pre5() {
   E#tiW#G.         ,WW;  E#K:    DL.        DL.        E#K:         f#D#;   E#t E#tiW#G.
   E#K##i            .D#; ED.     :          :          ED.           G#t    E#t E#K##i
   E##D.               tt t                             t              t     E#t E##D.
-  E#t                                                                       ,;. E#t   
+  E#t                                                                       ,;. E#t
   L:                                                                            L:`}</pre>
   );
 }
@@ -100,19 +100,19 @@ function Pre5() {
 function Pre7() {
   return (
     <pre aria-label="DEVOID">{`
-________  __________ ____     ___ ,M' ,M'____     ___   ____   ___________   
-\`MMMMMMMb.\`MMMMMMMMM \`Mb(     )d' dP  dP \`Mb(     )d'  6MMMMb  \`MM\`MMMMMMMb. 
- MM    \`Mb MM      \\  YM.     ,P ,M' ,M'  YM.     ,P  8P    Y8  MM MM    \`Mb 
- MM     MM MM         \`Mb     d' dP  dP   \`Mb     d' 6M      Mb MM MM     MM 
- MM     MM MM    ,     YM.   ,P ,M' ,M'    YM.   ,P  MM      MM MM MM     MM 
- MM     MM MMMMMMM     \`Mb   d' dP  dP     \`Mb   d'  MM      MM MM MM     MM 
- MM     MM MM    \`      YM. ,P ,M' ,M'      YM. ,P   MM      MM MM MM     MM 
- MM     MM MM           \`Mb d' dP  dP       \`Mb d'   MM      MM MM MM     MM 
- MM     MM MM            YM,P ,M' ,M'        YM,P    YM      M9 MM MM     MM 
- MM    .M9 MM      /     \`MM' dP  dP         \`MM'     8b    d8  MM MM    .M9 
-_MMMMMMM9'_MMMMMMMMM      YP ,M' ,M'          YP       YMMMM9  _MM_MMMMMMM9' 
-                             dP  dP                                          
-                            ,M' ,M'                                          
+________  __________ ____     ___ ,M' ,M'____     ___   ____   ___________
+\`MMMMMMMb.\`MMMMMMMMM \`Mb(     )d' dP  dP \`Mb(     )d'  6MMMMb  \`MM\`MMMMMMMb.
+ MM    \`Mb MM      \\  YM.     ,P ,M' ,M'  YM.     ,P  8P    Y8  MM MM    \`Mb
+ MM     MM MM         \`Mb     d' dP  dP   \`Mb     d' 6M      Mb MM MM     MM
+ MM     MM MM    ,     YM.   ,P ,M' ,M'    YM.   ,P  MM      MM MM MM     MM
+ MM     MM MMMMMMM     \`Mb   d' dP  dP     \`Mb   d'  MM      MM MM MM     MM
+ MM     MM MM    \`      YM. ,P ,M' ,M'      YM. ,P   MM      MM MM MM     MM
+ MM     MM MM           \`Mb d' dP  dP       \`Mb d'   MM      MM MM MM     MM
+ MM     MM MM            YM,P ,M' ,M'        YM,P    YM      M9 MM MM     MM
+ MM    .M9 MM      /     \`MM' dP  dP         \`MM'     8b    d8  MM MM    .M9
+_MMMMMMM9'_MMMMMMMMM      YP ,M' ,M'          YP       YMMMM9  _MM_MMMMMMM9'
+                             dP  dP
+                            ,M' ,M'
                             dP  dP`}</pre>
   );
 }
@@ -141,8 +141,7 @@ function Pre9() {
 
 function Pre10() {
   return (
-    <pre aria-label="DEVOID">{`                                                                                             
-@@@@@@@   @@@@@@@@  @@@  @@@           @@@           @@@  @@@  @@@   @@@@@@   @@@  @@@@@@@
+    <pre aria-label="DEVOID">{`@@@@@@@   @@@@@@@@  @@@  @@@           @@@           @@@  @@@  @@@   @@@@@@   @@@  @@@@@@@
 @@@@@@@@  @@@@@@@@  @@@  @@@          @@@           @@@   @@@  @@@  @@@@@@@@  @@@  @@@@@@@@
 @@!  @@@  @@!       @@!  @@@         @@!           @@!    @@!  @@@  @@!  @@@  @@!  @@!  @@@
 !@!  @!@  !@!       !@!  @!@        !@!           !@!     !@!  @!@  !@!  @!@  !@!  !@!  @!@
@@ -157,8 +156,7 @@ function Pre10() {
 
 function Pre11() {
   return (
-    <pre aria-label="DEVOID">{`                                                       
-@@@@@@@   @@@@@@@@  @@@  @@@   @@@@@@   @@@  @@@@@@@
+    <pre aria-label="DEVOID">{`@@@@@@@   @@@@@@@@  @@@  @@@   @@@@@@   @@@  @@@@@@@
 @@@@@@@@  @@@@@@@@  @@@  @@@  @@@@@@@@  @@@  @@@@@@@@
 @@!  @@@  @@!       @@!  @@@  @@!  @@@  @@!  @@!  @@@
 !@!  @!@  !@!       !@!  @!@  !@!  @!@  !@!  !@!  @!@
@@ -173,12 +171,12 @@ function Pre11() {
 
 function Pre12() {
   return (
-    <pre aria-label="DEVOID">{`oooooooooo.   oooooooooooo oooooo     oooo   .oooooo.   ooooo oooooooooo.   
-\`888'   \`Y8b  \`888'     \`8  \`888.     .8'   d8P'  \`Y8b  \`888' \`888'   \`Y8b  
- 888      888  888           \`888.   .8'   888      888  888   888      888 
- 888      888  888oooo8       \`888. .8'    888      888  888   888      888 
- 888      888  888    "        \`888.8'     888      888  888   888      888 
- 888     d88'  888       o      \`888'      \`88b    d88'  888   888     d88' 
+    <pre aria-label="DEVOID">{`oooooooooo.   oooooooooooo oooooo     oooo   .oooooo.   ooooo oooooooooo.
+\`888'   \`Y8b  \`888'     \`8  \`888.     .8'   d8P'  \`Y8b  \`888' \`888'   \`Y8b
+ 888      888  888           \`888.   .8'   888      888  888   888      888
+ 888      888  888oooo8       \`888. .8'    888      888  888   888      888
+ 888      888  888    "        \`888.8'     888      888  888   888      888
+ 888     d88'  888       o      \`888'      \`88b    d88'  888   888     d88'
 o888bood8P'   o888ooooood8       \`8'        \`Y8bood8P'  o888o o888bood8P'`}</pre>
   );
 }
