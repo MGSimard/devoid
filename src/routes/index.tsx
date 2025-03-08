@@ -11,11 +11,16 @@ function PageIndex() {
         <Pre />
       </section>
       <section>
-        <h2>Tooltip planning</h2>
-        <Tooltip />
+        <h2>Tooltip & Notification planning</h2>
+        <ul>
+          <li>- Purely ASCII, character borders</li>
+          <li>- Calculate frame width and height depending on character count</li>
+          <li>- Setup a max width for linebreaks</li>
+          <li>- Consider viewport width, zoom level etc</li>
+        </ul>
       </section>
       <section>
-        <h2>Notification planning</h2>
+        <h2>Notification</h2>
         <p>Bit like sonner?</p>
         <Notification />
       </section>
@@ -39,7 +44,7 @@ function Pre() {
 function Tooltip() {
   return (
     <pre>{`**********************************************************
-* Since we're monospace I could calc character amount    *
+* Monospace, calc char amount, adjust frame width    *
 * and then adjust the amount of asterixes for emulated   *
 * space in the tooltip. Also have to consider current    *
 * viewport width, if position would render outside       *
