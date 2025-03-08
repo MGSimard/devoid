@@ -11,11 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as NotifLabImport } from './routes/notif-lab'
 import { Route as InsightImport } from './routes/insight'
 import { Route as AsciiImport } from './routes/ascii'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const NotifLabRoute = NotifLabImport.update({
+  id: '/notif-lab',
+  path: '/notif-lab',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const InsightRoute = InsightImport.update({
   id: '/insight',
@@ -60,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightImport
       parentRoute: typeof rootRoute
     }
+    '/notif-lab': {
+      id: '/notif-lab'
+      path: '/notif-lab'
+      fullPath: '/notif-lab'
+      preLoaderRoute: typeof NotifLabImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -69,12 +83,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
+  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
+  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRoutesById {
@@ -82,14 +98,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
+  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ascii' | '/insight'
+  fullPaths: '/' | '/ascii' | '/insight' | '/notif-lab'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ascii' | '/insight'
-  id: '__root__' | '/' | '/ascii' | '/insight'
+  to: '/' | '/ascii' | '/insight' | '/notif-lab'
+  id: '__root__' | '/' | '/ascii' | '/insight' | '/notif-lab'
   fileRoutesById: FileRoutesById
 }
 
@@ -97,12 +114,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AsciiRoute: typeof AsciiRoute
   InsightRoute: typeof InsightRoute
+  NotifLabRoute: typeof NotifLabRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AsciiRoute: AsciiRoute,
   InsightRoute: InsightRoute,
+  NotifLabRoute: NotifLabRoute,
 }
 
 export const routeTree = rootRoute
@@ -117,7 +136,8 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/ascii",
-        "/insight"
+        "/insight",
+        "/notif-lab"
       ]
     },
     "/": {
@@ -128,6 +148,9 @@ export const routeTree = rootRoute
     },
     "/insight": {
       "filePath": "insight.tsx"
+    },
+    "/notif-lab": {
+      "filePath": "notif-lab.tsx"
     }
   }
 }

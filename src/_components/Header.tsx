@@ -20,6 +20,9 @@ export function Header() {
             <li>
               <Link to="/insight">INSIGHT</Link>
             </li>
+            <li>
+              <Link to="/notif-lab">NOTIF LAB</Link>
+            </li>
           </ul>
         </nav>
         <div id="header-text">
