@@ -56,7 +56,7 @@ function Tooltip() {
 
 function Notification() {
   return (
-    <pre>{`.::::::::::: [Notification] :::::::::::.
+    <pre>{`.::::::::::: [NOTIFICATION] :::::::::::.
 |                                      |
 | Would pop up similarly to Sonner     |
 | Again, adjust frame character length |
