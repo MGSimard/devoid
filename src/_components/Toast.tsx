@@ -15,8 +15,6 @@
  * Linebreak if text line is greater than 29 characters
  * Always fill remaining space with spacebars to finish 33 length
  * Hyphen break words if pre/post lines would each have at least 3 characters
- *
- *
  */
 
 import { wrapText33 } from "@/_utils/helpers";
