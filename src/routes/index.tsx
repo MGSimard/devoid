@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Notification } from "@/_components/Notification";
 
 export const Route = createFileRoute("/")({
   component: PageIndex,

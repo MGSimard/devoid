@@ -2,6 +2,7 @@
 
 # Task List
 
+- [ ] Go back and finish the toast/notification styling
 - [ ] See if there's a way to dump the helper function entirely for dynamic ASCII notifications, maybe there's a play somewhere with just html/css? Hard to imagine if we want to strictly stay within ASCII territory
 - [ ] .link styles (still need discernability when not hovered/focus-visible)
 - [ ] Figure out if I can stop glow bleeds between lines for ASCII art while still having glow

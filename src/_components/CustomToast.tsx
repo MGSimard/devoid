@@ -6,7 +6,7 @@ interface PropTypes {
   type?: TypeEnum;
 }
 
-export function Notification({ message }: PropTypes) {
+export function CustomToast({ message }: PropTypes) {
   const firstLine = ".::::::::::: [ALERT] :::::::::::.";
   const padddLine = "|                               |";
   const lasttLine = "'-------------------------------'";
