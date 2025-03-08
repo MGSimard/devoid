@@ -248,10 +248,8 @@ pre {
     /* ] bottom */ calc(100% - 13.13ch) 0.56ch,
     /* Topright Up */ calc(100% - 1.35ch) 0.56ch,
     /* Topright Down */ calc(100% - 0.15ch) 1.45ch,
-    /* Bottomright up */ calc(100% - 0.15ch) calc(100% - 1.18ch),
-    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.78ch),
-    /* Bottomleft down */ 1.2ch calc(100% - 0.78ch),
-    /* Bottomleft up */ 0.15ch calc(100% - 1.18ch)
+    /* Bottomright */ calc(100% - 0.15ch) calc(100% - 0.78ch),
+    /* Bottomleft */ 0.15ch calc(100% - 0.78ch)
   );
   transition: opacity 0.2s ease;
 }
