@@ -213,9 +213,6 @@ pre {
   -ms-user-select: none;
   user-select: none;
 }
-.spaced {
-  letter-spacing: 1ch;
-}
 .link {
   /* Something else here to distinguish */
 }
