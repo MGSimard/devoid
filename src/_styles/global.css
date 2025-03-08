@@ -213,6 +213,7 @@ details[open] summary {
 /**/
 /* TODO: REMOVE */
 pre {
+  text-align: unset;
   margin-bottom: 2ch;
 }
 /* NOTIFICATION */
