@@ -34,7 +34,7 @@ export function Toast({ message }: PropTypes) {
   const contentLines = wrapText33(message, firstLine.length); // Send message and content line length we want
 
   return (
-    <pre>{`${firstLine}
+    <pre className="notification">{`${firstLine}
 ${padddLine}
 ${contentLines.join("\n")}
 ${padddLine}
