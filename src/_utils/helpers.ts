@@ -1,4 +1,6 @@
 export function wrapText33(msg: string, lineLength: number): string[] {
+  // Claude is my homie
+
   // Constants for hyphenation rules
   const MIN_CHARS_BEFORE_HYPHEN = 3;
   const MIN_CHARS_AFTER_HYPHEN = 3;
