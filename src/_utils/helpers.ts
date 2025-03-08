@@ -1,66 +1,62 @@
 export function wrapText33(msg: string, lineLength: number): string[] {
   const words = msg.trim().split(/\s+/);
   const maxContentLength = lineLength - 4; // Minus both frames and both space paddings
-  const formatLine = (text: string) => {
-    return `| ${text.padEnd(maxContentLength, " ")} |`;
-  };
   const lines: string[] = [];
   let currentLine = "";
 
+  // Format and add line to output
+  const addLine = (text: string) => {
+    lines.push(`| ${text.padEnd(maxContentLength, " ")} |`);
+  };
+
+  // Process word chunks that are too long for a single line
+  const processLongWord = (word: string, startIndex = 0): string => {
+    const chunkSize = maxContentLength - 1; // -1 for hyphen
+
+    for (let i = startIndex; i < word.length; i += chunkSize) {
+      const isLastChunk = i + chunkSize >= word.length;
+
+      if (isLastChunk) {
+        return word.slice(i);
+      }
+
+      addLine(word.slice(i, i + chunkSize) + "-");
+    }
+
+    return ""; // Should never reach here if function is used correctly
+  };
+
   for (const word of words) {
-    const wordLength = word.length;
     const currentLineLength = currentLine.length;
-    const spaceNeeded = currentLineLength ? 1 : 0; // Space needed if not at start of line
+    const spaceNeeded = currentLineLength ? 1 : 0;
+    const availableSpace = maxContentLength - currentLineLength - spaceNeeded;
 
-    // If word fits in current line
-    if (currentLineLength + wordLength + spaceNeeded <= maxContentLength) {
+    // Case 1: Word fits in current line
+    if (word.length <= availableSpace) {
       currentLine += (spaceNeeded ? " " : "") + word;
+      continue;
     }
 
-    // If there's at least 4 characters of space left and word is at least 8 chars
-    else if (wordLength >= 8 && maxContentLength - currentLineLength - spaceNeeded >= 4) {
-      const charsFittingCurrentLine = maxContentLength - currentLineLength - spaceNeeded - 1; // -1 for hyphen
-      const firstPart = word.slice(0, charsFittingCurrentLine);
-      const secondPart = word.slice(charsFittingCurrentLine);
+    // Case 2: Smart hyphenation when enough space exists
+    if (word.length >= 8 && availableSpace >= 4) {
+      currentLine += (spaceNeeded ? " " : "") + word.slice(0, availableSpace - 1) + "-";
+      addLine(currentLine);
 
-      currentLine += (spaceNeeded ? " " : "") + firstPart + "-";
-      lines.push(formatLine(currentLine));
-
-      if (secondPart.length <= maxContentLength) {
-        currentLine = secondPart;
-      } else {
-        currentLine = "";
-
-        const chunkSize = maxContentLength - 1; // -1 for hyphen
-        for (let i = 0; i < secondPart.length; i += chunkSize) {
-          const chunk = secondPart.slice(i, i + chunkSize);
-          if (i + chunkSize >= secondPart.length) {
-            currentLine = chunk;
-          } else {
-            lines.push(formatLine(chunk + "-"));
-          }
-        }
-      }
-    } else {
-      if (currentLine) lines.push(formatLine(currentLine));
-
-      if (wordLength > maxContentLength) {
-        currentLine = "";
-        const chunkSize = maxContentLength - 1; // -1 for hyphen
-        for (let i = 0; i < wordLength; i += chunkSize) {
-          const chunk = word.slice(i, i + chunkSize);
-          if (i + chunkSize >= wordLength) {
-            currentLine = chunk;
-          } else {
-            lines.push(formatLine(chunk + "-"));
-          }
-        }
-      } else {
-        currentLine = word;
-      }
+      // Process remainder of word
+      const secondPart = word.slice(availableSpace - 1);
+      currentLine = secondPart.length <= maxContentLength ? secondPart : processLongWord(secondPart);
+      continue;
     }
+
+    // Case 3: Start new line
+    if (currentLine) addLine(currentLine);
+
+    // Handle word longer than line length
+    currentLine = word.length > maxContentLength ? processLongWord(word) : word;
   }
 
-  if (currentLine) lines.push(formatLine(currentLine));
+  // Add the last line if not empty
+  if (currentLine) addLine(currentLine);
+
   return lines;
 }
