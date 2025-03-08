@@ -14,10 +14,10 @@ export function Header() {
               <Link to="/">NEXUS</Link>
             </li>
             <li>
-              <Link to="/insight">INSIGHT</Link>
+              <Link to="/ascii">ASCII</Link>
             </li>
             <li>
-              <Link to="/ascii">ASCII</Link>
+              <Link to="/insight">INSIGHT</Link>
             </li>
           </ul>
         </nav>
