@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as InsightImport } from './routes/insight'
+import { Route as AsciiImport } from './routes/ascii'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
@@ -19,6 +20,12 @@ import { Route as IndexImport } from './routes/index'
 const InsightRoute = InsightImport.update({
   id: '/insight',
   path: '/insight',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AsciiRoute = AsciiImport.update({
+  id: '/ascii',
+  path: '/ascii',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,6 +46,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/ascii': {
+      id: '/ascii'
+      path: '/ascii'
+      fullPath: '/ascii'
+      preLoaderRoute: typeof AsciiImport
+      parentRoute: typeof rootRoute
+    }
     '/insight': {
       id: '/insight'
       path: '/insight'
@@ -53,36 +67,41 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/ascii': typeof AsciiRoute
   '/insight': typeof InsightRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/insight'
+  fullPaths: '/' | '/ascii' | '/insight'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/insight'
-  id: '__root__' | '/' | '/insight'
+  to: '/' | '/ascii' | '/insight'
+  id: '__root__' | '/' | '/ascii' | '/insight'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AsciiRoute: typeof AsciiRoute
   InsightRoute: typeof InsightRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AsciiRoute: AsciiRoute,
   InsightRoute: InsightRoute,
 }
 
@@ -97,11 +116,15 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/ascii",
         "/insight"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/ascii": {
+      "filePath": "ascii.tsx"
     },
     "/insight": {
       "filePath": "insight.tsx"
