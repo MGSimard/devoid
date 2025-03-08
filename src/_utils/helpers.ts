@@ -24,7 +24,6 @@ export function wrapText33(msg: string, lineLength: number): string[] {
   const breakLongWord = (word: string): string => {
     const chunkSize = maxContentLength - 1; // Space for hyphen
     let remaining = word;
-    let result = "";
 
     while (remaining.length > maxContentLength) {
       const chunk = remaining.slice(0, chunkSize);
