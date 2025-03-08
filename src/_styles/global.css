@@ -220,4 +220,5 @@ pre {
 }
 /* NOTIFICATION */
 .notification {
+  background: var(--clrBg);
 }
