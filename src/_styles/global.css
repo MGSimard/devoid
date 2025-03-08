@@ -243,17 +243,17 @@ pre {
     inset 0 0 0.5rem var(--clrPrimary), inset 0 0 1rem var(--clrPrimary), inset 0 0 2.5rem var(--clrPrimary),
     inset 0 0 5rem var(--clrPrimary); */
   clip-path: polygon(
-    /* Topleft Down */ 0.34ch 1.45ch,
-    /* Topleft Up */ 1.45ch 0.76ch,
-    /* [ bottom */ 13.3ch 0.76ch,
-    /* [ top */ 13.3ch 0.37ch,
-    /* ] top */ calc(100% - 13.3ch) 0.37ch,
-    /* ] bottom */ calc(100% - 13.3ch) 0.76ch,
-    /* Topright Up */ calc(100% - 1.45ch) 0.76ch,
-    /* Topright Down */ calc(100% - 0.34ch) 1.45ch,
-    /* Bottomright up */ calc(100% - 0.34ch) calc(100% - 1.15ch),
-    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.95ch),
-    /* Bottomleft down */ 1.2ch calc(100% - 0.95ch),
-    /* Bottomleft up */ 0.34ch calc(100% - 1.15ch)
+    /* Topleft Down */ 0.15ch 1.45ch,
+    /* Topleft Up */ 1.35ch 0.56ch,
+    /* [ bottom */ 13.13ch 0.56ch,
+    /* [ top */ 13.13ch 0.1ch,
+    /* ] top */ calc(100% - 13.13ch) 0.1ch,
+    /* ] bottom */ calc(100% - 13.13ch) 0.56ch,
+    /* Topright Up */ calc(100% - 1.35ch) 0.56ch,
+    /* Topright Down */ calc(100% - 0.15ch) 1.45ch,
+    /* Bottomright up */ calc(100% - 0.15ch) calc(100% - 1.18ch),
+    /* Bottomright down */ calc(100% - 1.2ch) calc(100% - 0.78ch),
+    /* Bottomleft down */ 1.2ch calc(100% - 0.78ch),
+    /* Bottomleft up */ 0.15ch calc(100% - 1.18ch)
   );
 }
