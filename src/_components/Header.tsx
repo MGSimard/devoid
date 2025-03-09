@@ -21,7 +21,7 @@ export function Header() {
               <Link to="/echo">ECHO</Link>
             </li>
             <li>
-              <Link to="/insight">INSIGHT</Link>
+              <Link to="/intel">INTEL</Link>
             </li>
           </ul>
         </nav>

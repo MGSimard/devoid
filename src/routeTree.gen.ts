@@ -11,16 +11,16 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as InsightImport } from './routes/insight'
+import { Route as IntelImport } from './routes/intel'
 import { Route as GlyphImport } from './routes/glyph'
 import { Route as EchoImport } from './routes/echo'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const InsightRoute = InsightImport.update({
-  id: '/insight',
-  path: '/insight',
+const IntelRoute = IntelImport.update({
+  id: '/intel',
+  path: '/intel',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -67,11 +67,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlyphImport
       parentRoute: typeof rootRoute
     }
-    '/insight': {
-      id: '/insight'
-      path: '/insight'
-      fullPath: '/insight'
-      preLoaderRoute: typeof InsightImport
+    '/intel': {
+      id: '/intel'
+      path: '/intel'
+      fullPath: '/intel'
+      preLoaderRoute: typeof IntelImport
       parentRoute: typeof rootRoute
     }
   }
@@ -83,14 +83,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
-  '/insight': typeof InsightRoute
+  '/intel': typeof IntelRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
-  '/insight': typeof InsightRoute
+  '/intel': typeof IntelRoute
 }
 
 export interface FileRoutesById {
@@ -98,15 +98,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
-  '/insight': typeof InsightRoute
+  '/intel': typeof IntelRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/echo' | '/glyph' | '/insight'
+  fullPaths: '/' | '/echo' | '/glyph' | '/intel'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/echo' | '/glyph' | '/insight'
-  id: '__root__' | '/' | '/echo' | '/glyph' | '/insight'
+  to: '/' | '/echo' | '/glyph' | '/intel'
+  id: '__root__' | '/' | '/echo' | '/glyph' | '/intel'
   fileRoutesById: FileRoutesById
 }
 
@@ -114,14 +114,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EchoRoute: typeof EchoRoute
   GlyphRoute: typeof GlyphRoute
-  InsightRoute: typeof InsightRoute
+  IntelRoute: typeof IntelRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EchoRoute: EchoRoute,
   GlyphRoute: GlyphRoute,
-  InsightRoute: InsightRoute,
+  IntelRoute: IntelRoute,
 }
 
 export const routeTree = rootRoute
@@ -137,7 +137,7 @@ export const routeTree = rootRoute
         "/",
         "/echo",
         "/glyph",
-        "/insight"
+        "/intel"
       ]
     },
     "/": {
@@ -149,8 +149,8 @@ export const routeTree = rootRoute
     "/glyph": {
       "filePath": "glyph.tsx"
     },
-    "/insight": {
-      "filePath": "insight.tsx"
+    "/intel": {
+      "filePath": "intel.tsx"
     }
   }
 }
