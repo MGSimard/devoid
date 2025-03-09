@@ -282,6 +282,7 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
     border: 5px solid pink;
   }
   .custom-toast-wrapper {
+    margin: 0 auto;
     border: 1px solid yellow;
   }
   .custom-toast {
