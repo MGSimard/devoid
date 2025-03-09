@@ -8,7 +8,7 @@ function PageIntel() {
   return (
     <main>
       <section>
-        <p>THIS WEBSITE SERVES NO PARTICULAR PURPOSE</p>
+        <p className="center">THIS WEBSITE SERVES NO PARTICULAR PURPOSE</p>
       </section>
     </main>
   );

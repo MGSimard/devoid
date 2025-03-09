@@ -229,6 +229,9 @@ pre {
   box-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
     0 0 1rem var(--clrPrimary), 0 0 2.5rem var(--clrPrimary), 0 0 5rem var(--clrPrimary);
 }
+.center {
+  text-align: center;
+}
 /**/
 /* NOTIFICATION */
 .custom-toast-wrapper {
