@@ -19,7 +19,7 @@ function PageEcho() {
         </button>
         <button
           type="button"
-          onClick={() => toast.custom(() => <CustomToast message="A generic feedback message." type="error" />)}>
+          onClick={() => toast.custom(() => <CustomToast message="A generic error message." type="error" />)}>
           Test Echo (error)
         </button>
         <h2>Echo component</h2>
