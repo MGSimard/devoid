@@ -156,6 +156,7 @@ h4,
 h5,
 h6 {
   font-size: 1.6rem;
+  text-align: center;
   text-transform: uppercase;
 }
 img,
@@ -178,6 +179,7 @@ button {
   all: unset;
   font-family: inherit;
   cursor: pointer;
+  text-align: center;
 }
 button:disabled {
   cursor: auto;
