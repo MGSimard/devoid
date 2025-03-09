@@ -274,9 +274,17 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
   [data-sonner-toaster][data-x-position="right"] {
     left: 0;
     right: 0;
+    border: 1px solid blue;
   }
   [data-sonner-toaster] [data-sonner-toast] {
     margin: 0 auto;
     width: fit-content;
+    border: 5px solid pink;
+  }
+  .custom-toast-wrapper {
+    border: 1px solid yellow;
+  }
+  .custom-toast {
+    border: 1px solid green;
   }
 }
