@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CustomToast } from "@/_components/CustomToast";
 import { toast } from "sonner";
 
-export const Route = createFileRoute("/notif-lab")({
-  component: PageNotifLab,
+export const Route = createFileRoute("/echo")({
+  component: PageEcho,
 });
 
-function PageNotifLab() {
+function PageEcho() {
   return (
     <main>
       <section>

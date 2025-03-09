@@ -11,18 +11,12 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as NotifLabImport } from './routes/notif-lab'
 import { Route as InsightImport } from './routes/insight'
-import { Route as AsciiImport } from './routes/ascii'
+import { Route as GlyphImport } from './routes/glyph'
+import { Route as EchoImport } from './routes/echo'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const NotifLabRoute = NotifLabImport.update({
-  id: '/notif-lab',
-  path: '/notif-lab',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const InsightRoute = InsightImport.update({
   id: '/insight',
@@ -30,9 +24,15 @@ const InsightRoute = InsightImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const AsciiRoute = AsciiImport.update({
-  id: '/ascii',
-  path: '/ascii',
+const GlyphRoute = GlyphImport.update({
+  id: '/glyph',
+  path: '/glyph',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const EchoRoute = EchoImport.update({
+  id: '/echo',
+  path: '/echo',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -53,11 +53,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/ascii': {
-      id: '/ascii'
-      path: '/ascii'
-      fullPath: '/ascii'
-      preLoaderRoute: typeof AsciiImport
+    '/echo': {
+      id: '/echo'
+      path: '/echo'
+      fullPath: '/echo'
+      preLoaderRoute: typeof EchoImport
+      parentRoute: typeof rootRoute
+    }
+    '/glyph': {
+      id: '/glyph'
+      path: '/glyph'
+      fullPath: '/glyph'
+      preLoaderRoute: typeof GlyphImport
       parentRoute: typeof rootRoute
     }
     '/insight': {
@@ -67,13 +74,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightImport
       parentRoute: typeof rootRoute
     }
-    '/notif-lab': {
-      id: '/notif-lab'
-      path: '/notif-lab'
-      fullPath: '/notif-lab'
-      preLoaderRoute: typeof NotifLabImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -81,47 +81,47 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/ascii': typeof AsciiRoute
+  '/echo': typeof EchoRoute
+  '/glyph': typeof GlyphRoute
   '/insight': typeof InsightRoute
-  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/ascii': typeof AsciiRoute
+  '/echo': typeof EchoRoute
+  '/glyph': typeof GlyphRoute
   '/insight': typeof InsightRoute
-  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/ascii': typeof AsciiRoute
+  '/echo': typeof EchoRoute
+  '/glyph': typeof GlyphRoute
   '/insight': typeof InsightRoute
-  '/notif-lab': typeof NotifLabRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ascii' | '/insight' | '/notif-lab'
+  fullPaths: '/' | '/echo' | '/glyph' | '/insight'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ascii' | '/insight' | '/notif-lab'
-  id: '__root__' | '/' | '/ascii' | '/insight' | '/notif-lab'
+  to: '/' | '/echo' | '/glyph' | '/insight'
+  id: '__root__' | '/' | '/echo' | '/glyph' | '/insight'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AsciiRoute: typeof AsciiRoute
+  EchoRoute: typeof EchoRoute
+  GlyphRoute: typeof GlyphRoute
   InsightRoute: typeof InsightRoute
-  NotifLabRoute: typeof NotifLabRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AsciiRoute: AsciiRoute,
+  EchoRoute: EchoRoute,
+  GlyphRoute: GlyphRoute,
   InsightRoute: InsightRoute,
-  NotifLabRoute: NotifLabRoute,
 }
 
 export const routeTree = rootRoute
@@ -135,22 +135,22 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/ascii",
-        "/insight",
-        "/notif-lab"
+        "/echo",
+        "/glyph",
+        "/insight"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/ascii": {
-      "filePath": "ascii.tsx"
+    "/echo": {
+      "filePath": "echo.tsx"
+    },
+    "/glyph": {
+      "filePath": "glyph.tsx"
     },
     "/insight": {
       "filePath": "insight.tsx"
-    },
-    "/notif-lab": {
-      "filePath": "notif-lab.tsx"
     }
   }
 }

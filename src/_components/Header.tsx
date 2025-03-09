@@ -15,13 +15,13 @@ export function Header() {
               <Link to="/">NEXUS</Link>
             </li>
             <li>
-              <Link to="/ascii">ASCII</Link>
+              <Link to="/glyph">ASCII</Link>
             </li>
             <li>
               <Link to="/insight">INSIGHT</Link>
             </li>
             <li>
-              <Link to="/notif-lab">NOTIF LAB</Link>
+              <Link to="/echo">ECHO</Link>
             </li>
           </ul>
         </nav>

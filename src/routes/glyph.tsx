@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/ascii")({
-  component: PageASCII,
+export const Route = createFileRoute("/glyph")({
+  component: PageGlyph,
 });
 
-function PageASCII() {
+function PageGlyph() {
   return (
     <main>
       <section>
