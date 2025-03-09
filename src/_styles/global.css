@@ -240,6 +240,10 @@ pre {
 [data-theme="dark"] .custom-toast-wrapper {
   filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2));
 }
+[data-theme="dark"] .custom-toast-wrapper.ct-error {
+  filter: drop-shadow(0 0 1rem hsla(from var(--clrPrimary) h s l / 0.2))
+    drop-shadow(0 0 5rem hsla(from var(--clrPrimary) h s l / 0.2));
+}
 .custom-toast {
   background: var(--clrBg);
   clip-path: polygon(
@@ -259,7 +263,7 @@ pre {
 [data-sonner-toaster] .custom-toast {
   cursor: grab; /* So it doesn't affect the on-page previews in notif lab */
 }
-.custom-toast.ct-error {
+.custom-toast-wrapper.ct-error .custom-toast {
   background: var(--clrPrimary);
   color: var(--clrBg);
 }
@@ -274,18 +278,12 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
   [data-sonner-toaster][data-x-position="right"] {
     left: 0;
     right: 0;
-    border: 1px solid blue;
   }
   [data-sonner-toaster] [data-sonner-toast] {
     margin: 0 auto;
     width: fit-content;
-    border: 5px solid pink;
   }
   .custom-toast-wrapper {
     margin: 0 auto;
-    border: 1px solid yellow;
-  }
-  .custom-toast {
-    border: 1px solid green;
   }
 }

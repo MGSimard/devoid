@@ -13,8 +13,8 @@ export function CustomToast({ message, type }: PropTypes) {
   const contentLines = wrapText33(message, firstLine.length); // Send message and content line length we want
 
   return (
-    <div className="custom-toast-wrapper">
-      <pre className={`custom-toast${type ? ` ct-${type}` : ""}`}>{`${firstLine}
+    <div className={`custom-toast-wrapper${type ? ` ct-${type}` : ""}`}>
+      <pre className="custom-toast">{`${firstLine}
 ${padddLine}
 ${contentLines.join("\n")}
 ${padddLine}

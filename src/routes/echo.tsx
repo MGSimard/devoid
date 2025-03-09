@@ -28,6 +28,7 @@ function PageEcho() {
         <CustomToast message="This is a loooooooooooooooooooooooong word message test, there should never be any overflow and the only times where a word should be hyphenated is if there were to be at least 3 characters in the before line, and three characters in the after line (not counting the hyphen)" />
         <CustomToast message="This is a message test" />
         <CustomToast message="This is a longer message test" />
+        <CustomToast message="This is an error message test" type="error" />
       </section>
     </main>
   );
