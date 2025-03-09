@@ -10,7 +10,7 @@ export const Route = createRootRoute({
       <Outlet />
       <ThemeToggle />
       <div id="screen-glow"></div>
-      <Toaster />
+      <Toaster duration={999999999} />
     </>
   ),
 });
