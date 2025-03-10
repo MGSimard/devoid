@@ -297,8 +297,17 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
   font-size: min(2vw, 1.6rem);
 }
 /* CIPHER PAGE */
-#canvas-test {
-  width: 100%;
-  height: 80rem;
+#cipher {
+  white-space: wrap;
+  word-wrap: wrap;
+  word-break: break-all;
   border: 1px solid red;
+  height: 50rem;
+  width: 100%;
+}
+/* #cipher > * {
+  border: 1px solid yellow;
+} */
+#cipher-ref-char {
+  display: inline-block;
 }

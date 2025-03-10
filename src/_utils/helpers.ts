@@ -75,3 +75,12 @@ export function wrapText33(msg: string, lineLength: number): string[] {
 
   return lines;
 }
+
+export function generateRandomString(length: number): string {
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  const randomValues = new Uint8Array(length);
+  window.crypto.getRandomValues(randomValues);
+
+  return String.fromCharCode(...randomValues.map((value) => charset.charCodeAt(value % charset.length)));
+}
