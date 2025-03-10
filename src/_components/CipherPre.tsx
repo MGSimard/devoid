@@ -10,21 +10,6 @@ export function CipherPre() {
   const containerRef = useRef<HTMLPreElement>(null);
   const refCharRef = useRef<HTMLSpanElement>(null);
 
-  // We could bruteforce by just overgenerating characters to fill the <pre> no matter its size
-  // But I'd rather do the math to do it right, gonna need to figure out relation with monospace
-  // Rect width/height, line count etc, would also be different with different fonts, so try
-  // doing something which would work no matter the monospace font
-
-  // For now let's handle initial paint, later we'll listen for container width changes (not height)
-
-  useEffect(() => {
-    // const horizontalCharCount = Math.floor(containerWidth / charWidth);
-    // const verticalCharCount = Math.floor(containerHeight / charHeight);
-    // const totalCharCount = Math.floor(horizontalCharCount * verticalCharCount - 1); // -1 for pre-rendered character
-    // console.log("Total Characters that can fit:", totalCharCount);
-    // Get reference character width & height for calculations
-  }, [containerSize, charSize]);
-
   // RESIZE OBSERVER
   useEffect(() => {
     const container = containerRef.current;
@@ -38,7 +23,6 @@ export function CipherPre() {
         const height = entries[0].contentRect.height;
 
         setContainerSize([width, height]);
-        console.log(`WIDTH: ${width} - HEIGHT: ${height}`);
       }
     });
 
@@ -48,7 +32,6 @@ export function CipherPre() {
         const height = entries[0].contentRect.height;
 
         setCharSize([width, height]);
-        console.log(`WIDTH: ${width} - HEIGHT: ${height}`);
       }
     });
 
@@ -60,6 +43,18 @@ export function CipherPre() {
       referenceObserver.disconnect();
     };
   }, [containerRef, refCharRef]);
+
+  useEffect(() => {
+    const [containerWidth, containerHeight] = containerSize;
+    const [charWidth, charHeight] = charSize;
+
+    const horizontalCharCount = Math.floor(containerWidth / charWidth);
+    const verticalCharCount = Math.floor(containerHeight / charHeight);
+    const totalCharCount = Math.floor(horizontalCharCount * verticalCharCount - 1); // -1 for pre-rendered character
+
+    console.log("Total Characters that can fit:", totalCharCount);
+    setChars(generateRandomString(totalCharCount));
+  }, [containerSize, charSize]);
 
   return (
     <>
