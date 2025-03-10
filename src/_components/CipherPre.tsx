@@ -8,37 +8,27 @@ export function CipherPre() {
   const containerRef = useRef<HTMLPreElement>(null);
   const refCharRef = useRef<HTMLSpanElement>(null);
 
-  // RESIZE OBSERVER
   useEffect(() => {
     const container = containerRef.current;
     const refChar = refCharRef.current;
     if (!container || !refChar) return;
 
-    // TODO: Check if I can merge this into a single observer later
-    const containerObserver = new ResizeObserver((entries) => {
-      if (entries[0]) {
-        const width = entries[0].contentRect.width;
-        const height = entries[0].contentRect.height;
-
-        setContainerSize([width, height]);
-      }
+    const resizeObserver = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === container) {
+          const { width, height } = entry.contentRect;
+          setContainerSize([width, height]);
+        } else if (entry.target === refChar) {
+          const { width, height } = entry.contentRect;
+          setCharSize([width, height]);
+        }
+      });
     });
-    containerObserver.observe(container);
 
-    const referenceObserver = new ResizeObserver((entries) => {
-      if (entries[0]) {
-        const width = entries[0].contentRect.width;
-        const height = entries[0].contentRect.height;
+    resizeObserver.observe(container);
+    resizeObserver.observe(refChar);
 
-        setCharSize([width, height]);
-      }
-    });
-    referenceObserver.observe(refChar);
-
-    return () => {
-      containerObserver.disconnect();
-      referenceObserver.disconnect();
-    };
+    return () => resizeObserver.disconnect();
   }, [containerRef, refCharRef]);
 
   useEffect(() => {

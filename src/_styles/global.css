@@ -301,9 +301,9 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
   white-space: wrap;
   word-wrap: wrap;
   word-break: break-all;
-  border: 1px solid red;
   height: 50rem;
   width: 100%;
+  border: 1px solid purple;
 }
 /* #cipher > * {
   border: 1px solid yellow;
