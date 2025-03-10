@@ -24,7 +24,6 @@ export function CipherPre() {
         }
       });
     });
-
     resizeObserver.observe(container);
     resizeObserver.observe(refChar);
 
