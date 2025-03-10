@@ -62,9 +62,7 @@ export function CipherPre() {
         <span ref={refCharRef} id="cipher-ref-char">
           @
         </span>
-        {chars.split("").map((char, index) => (
-          <span key={char + index}>{char}</span>
-        ))}
+        {chars}
       </pre>
     </>
   );
