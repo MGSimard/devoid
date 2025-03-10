@@ -22,6 +22,7 @@ function PageCipher() {
         <ul>
           <li>- Hide all characters</li>
           <li>- Show characters within a radius of pointer (mask?)</li>
+          <li>- Scale characters to proximity of pointer?</li>
         </ul>
       </section>
     </main>
