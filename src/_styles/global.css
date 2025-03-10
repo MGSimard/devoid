@@ -292,3 +292,7 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
     margin: 0 auto;
   }
 }
+/* INDEX PAGE */
+#index-pre {
+  font-size: min(2vw, 1.6rem);
+}
