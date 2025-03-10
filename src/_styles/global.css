@@ -199,6 +199,7 @@ details[open] summary {
 }
 pre {
   font-family: var(--coreFont);
+  font-size: inherit;
 }
 ::selection {
   color: var(--clrBg);
@@ -278,7 +279,6 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="1"] .custom-toast 
 ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast {
   opacity: 0.25;
 }
-/* OVERRIDE */
 @media (max-width: 600px) {
   [data-sonner-toaster][data-x-position="right"] {
     left: 0;
@@ -292,7 +292,13 @@ ol[data-sonner-toaster] li[data-expanded="false"][data-index="2"] .custom-toast 
     margin: 0 auto;
   }
 }
-/* INDEX PAGE */
+/* NEXUS PAGE */
 #index-pre {
   font-size: min(2vw, 1.6rem);
+}
+/* CIPHER PAGE */
+#canvas-test {
+  width: 100%;
+  height: 80rem;
+  border: 1px solid red;
 }

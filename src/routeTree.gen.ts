@@ -14,6 +14,7 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as IntelImport } from './routes/intel'
 import { Route as GlyphImport } from './routes/glyph'
 import { Route as EchoImport } from './routes/echo'
+import { Route as CipherImport } from './routes/cipher'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
@@ -36,6 +37,12 @@ const EchoRoute = EchoImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CipherRoute = CipherImport.update({
+  id: '/cipher',
+  path: '/cipher',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
@@ -51,6 +58,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/cipher': {
+      id: '/cipher'
+      path: '/cipher'
+      fullPath: '/cipher'
+      preLoaderRoute: typeof CipherImport
       parentRoute: typeof rootRoute
     }
     '/echo': {
@@ -81,6 +95,7 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cipher': typeof CipherRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
   '/intel': typeof IntelRoute
@@ -88,6 +103,7 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cipher': typeof CipherRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
   '/intel': typeof IntelRoute
@@ -96,6 +112,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/cipher': typeof CipherRoute
   '/echo': typeof EchoRoute
   '/glyph': typeof GlyphRoute
   '/intel': typeof IntelRoute
@@ -103,15 +120,16 @@ export interface FileRoutesById {
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/echo' | '/glyph' | '/intel'
+  fullPaths: '/' | '/cipher' | '/echo' | '/glyph' | '/intel'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/echo' | '/glyph' | '/intel'
-  id: '__root__' | '/' | '/echo' | '/glyph' | '/intel'
+  to: '/' | '/cipher' | '/echo' | '/glyph' | '/intel'
+  id: '__root__' | '/' | '/cipher' | '/echo' | '/glyph' | '/intel'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CipherRoute: typeof CipherRoute
   EchoRoute: typeof EchoRoute
   GlyphRoute: typeof GlyphRoute
   IntelRoute: typeof IntelRoute
@@ -119,6 +137,7 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CipherRoute: CipherRoute,
   EchoRoute: EchoRoute,
   GlyphRoute: GlyphRoute,
   IntelRoute: IntelRoute,
@@ -135,6 +154,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/cipher",
         "/echo",
         "/glyph",
         "/intel"
@@ -142,6 +162,9 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/cipher": {
+      "filePath": "cipher.tsx"
     },
     "/echo": {
       "filePath": "echo.tsx"
