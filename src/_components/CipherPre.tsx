@@ -4,9 +4,7 @@ import { useState, useEffect, useRef } from "react";
 export function CipherPre() {
   const [containerSize, setContainerSize] = useState<[number, number]>([0, 0]);
   const [charSize, setCharSize] = useState<[number, number]>([0, 0]);
-
   const [chars, setChars] = useState<string>("");
-
   const containerRef = useRef<HTMLPreElement>(null);
   const refCharRef = useRef<HTMLSpanElement>(null);
 
@@ -25,6 +23,7 @@ export function CipherPre() {
         setContainerSize([width, height]);
       }
     });
+    containerObserver.observe(container);
 
     const referenceObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
@@ -34,8 +33,6 @@ export function CipherPre() {
         setCharSize([width, height]);
       }
     });
-
-    containerObserver.observe(container);
     referenceObserver.observe(refChar);
 
     return () => {
@@ -47,12 +44,9 @@ export function CipherPre() {
   useEffect(() => {
     const [containerWidth, containerHeight] = containerSize;
     const [charWidth, charHeight] = charSize;
-
     const horizontalCharCount = Math.floor(containerWidth / charWidth);
     const verticalCharCount = Math.floor(containerHeight / charHeight);
     const totalCharCount = Math.floor(horizontalCharCount * verticalCharCount - 1); // -1 for pre-rendered character
-
-    console.log("Total Characters that can fit:", totalCharCount);
     setChars(generateRandomString(totalCharCount));
   }, [containerSize, charSize]);
 
