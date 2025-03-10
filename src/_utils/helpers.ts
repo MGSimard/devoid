@@ -77,9 +77,10 @@ export function wrapText33(msg: string, lineLength: number): string[] {
 }
 
 export function generateRandomString(length: number): string {
+  if (!length) return "";
   const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
   const randomValues = new Uint8Array(length);
+
   window.crypto.getRandomValues(randomValues);
 
   return String.fromCharCode(...randomValues.map((value) => charset.charCodeAt(value % charset.length)));
