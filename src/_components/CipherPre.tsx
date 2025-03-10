@@ -12,7 +12,6 @@ export function CipherPre() {
     const container = containerRef.current;
     const refChar = refCharRef.current;
     if (!container || !refChar) return;
-
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.target === container) {
@@ -26,7 +25,6 @@ export function CipherPre() {
     });
     resizeObserver.observe(container);
     resizeObserver.observe(refChar);
-
     return () => resizeObserver.disconnect();
   }, [containerRef, refCharRef]);
 
