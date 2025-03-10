@@ -17,6 +17,13 @@ function PageCipher() {
         </ul>
         <CipherPre />
       </section>
+      <section>
+        <h2>Next Steps</h2>
+        <ul>
+          <li>- Hide all characters</li>
+          <li>- Show characters within a radius of pointer (mask?)</li>
+        </ul>
+      </section>
     </main>
   );
 }
