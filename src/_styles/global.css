@@ -141,6 +141,11 @@ section:not([aria-label="Notifications alt+T"]) > *:not(:last-child) {
   right: var(--sitePadding);
   z-index: 1001;
 }
+#theme-toggle::after {
+  position: absolute;
+  content: "";
+  inset: -0.5ch -1ch;
+}
 #not-found {
   display: flex;
   flex-direction: column;
