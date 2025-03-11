@@ -14,6 +14,9 @@ function PageIndex() {
         <a href="#" className="link">
           &lt;&lt;Test Link&gt;&gt;
         </a>
+        <button type="button" className="btn">
+          +Test Button+
+        </button>
       </section>
     </main>
   );

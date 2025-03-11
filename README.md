@@ -3,8 +3,6 @@
 # Task List
 
 - [ ] Make sonners more readable over content
-- [ ] Button styles
-- [ ] .link styles (still need discernability when not hovered/focus-visible)
 - [ ] Figure out if I can stop glow bleeds between lines for ASCII art while still having glow
 - [ ] ...
 - [ ] Fuck native title tooltip, come up with something else + keep aria-label

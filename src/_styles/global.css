@@ -218,15 +218,16 @@ pre {
   -ms-user-select: none;
   user-select: none;
 }
-.link {
-  /* Something else here to distinguish */
-}
+.btn:hover,
+.btn:focus-visible,
 .link:hover,
 .link:focus-visible {
   color: var(--clrBg);
   background: var(--clrPrimary);
 }
-[data-theme="dark"] .link:hover,
+[data-theme="dark"] .btn:hover,
+[data-theme="dark"] .btn:focus-visible [data-theme="dark"],
+.link:hover,
 [data-theme="dark"] .link:focus-visible {
   text-shadow: none;
   box-shadow: 0 0 0.1rem var(--clrPrimary), 0 0 0.25rem var(--clrPrimary), 0 0 0.5rem var(--clrPrimary),
